@@ -1,0 +1,651 @@
+svg {
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    user-select:none;
+    // 层次流程拓扑图 图表画布
+    &.hierarchical-digram {
+        g.axis line {
+            // stroke: #eee;
+            stroke-width: 2;
+        }
+
+        g.grid {
+            &.grid--x, &.grid--y {
+                stroke-opacity: 0.2;
+                line {
+                    stroke: rgb(211, 211, 211);
+                }
+            }
+            &.grid--max--x, &.grid--max--y {
+                stroke-opacity: 0.1;
+                line {
+                    stroke-width: 2;
+                    stroke: rgb(128, 128, 128);
+                }
+            }
+        }
+        .group-container {
+            path.group-path {
+                fill: transparent;
+                stroke: bisque;
+            }
+        }
+        .link-container {
+            .link-g {
+                .link {
+                    stroke: #005b8e;
+                    stroke-width: 2;
+                    fill: transparent;
+                }
+
+                &.actived {
+                    .link-actived-bg {
+                        opacity: 0.3;
+                    }
+                    .option-remove {
+                        display: block;
+                    }
+                }
+                &.invalid {
+                    .link {
+                        stroke: $danger !important;
+                    }
+                }
+            }
+            .link-actived-bg {
+                    fill: none;
+                    stroke: $fontOrange;
+                    stroke-width: 15;
+                    stroke-linecap: round;
+                    stroke-linejoin: round;
+                    opacity: 0;
+                    cursor: move;
+            }
+            .option-remove {
+                display: none;
+                circle {
+                    fill: $danger;
+                }
+                path {
+                    fill: $fontWhite;
+                }
+            }
+        }
+
+        .dragline {
+            fill: transparent;
+            stroke: $linkColor;
+            stroke-width: 3;
+            &.hidden {
+                display: none;
+            }
+        }
+
+        .node {
+            fill: #addff1;
+            &:hover {
+                cursor: move;
+            }
+            .node_rect {
+                rx: 5;
+                ry: 5;
+            }
+
+            .parent-node-title-container {
+                display: none;
+            }
+
+            .option-remove-container {
+                display: none;
+                circle {
+                    fill: $danger;
+                }
+
+                path {
+                    fill: $fontWhite;
+                }
+            }
+
+            .content-icon {
+                font-family: 'iconfont-ucmp' !important;
+                fill: #005b8e;
+                stroke: transparent;
+            }
+
+
+            .link_reference {
+                fill: #fff;
+                stroke: #005b8e;
+                stroke-width: 2;
+                &.reference_hover {
+                    fill: #005b8e;
+                    stroke: #fff;
+                }
+            }
+
+            &.actived, &.ctrl-checked-node {
+                rect.node_rect {
+                    fill: $chartCardBgOrange;
+                    opacity: 0.3;
+                }
+
+                .content-icon {
+                    fill: $chartCardBgOrange;
+                    stroke: transparent;
+                }
+
+                &.show-rm-btn {
+                    .option-remove-container {
+                        display: block;
+                    }
+                }
+            }
+            &.actived {
+                rect.node_rect {
+                    stroke: $running;
+                    stroke-width: 4;
+                }
+            }
+            &.invalid {
+                rect.node_rect {
+                    stroke: $danger;
+                    stroke-width: 4;
+                }
+            }
+            &.reference_feedback {
+                rect.node_rect {
+                    stroke: $running;
+                    fill: $running;
+                    opacity: 0.5;
+                }
+            }
+            &.no_reference_feedback {
+                opacity: 0.8;
+            }
+            &.nested-node {
+                fill: transparent;
+                stroke: rgba(0, 91, 142, 0.8);
+                &.actived, &.ctrl-checked-node {
+                    stroke: $chartCardBgOrange;
+                    .parent-node-title-container {
+                        .parent-node-title-bg {
+                            fill: $chartCardBgOrange;
+                            rx: 5;
+                        }
+                    }
+                }
+
+                .parent-node-title-container {
+                    display: block;
+                    .title-icon {
+                        font-family: 'iconfont-ucmp' !important;
+                    }
+
+                    .node-title {
+                        stroke-width: 1px;
+                    }
+
+                    .parent-node-title-bg {
+                        fill: rgb(0, 91, 142);
+                        rx: 5;
+                    }
+                }
+
+                .content-icon {
+                    display: none;
+                }
+
+                &.reference_feedback {
+                    .parent-node-title-bg {
+                        fill: $running;
+                        stroke: $running;
+                    }
+                    rect.node_rect {
+                        opacity: 0.1;
+                    }
+                }
+            }
+        }
+
+        .add-link {
+            display: none;
+            &.show-btn {
+                display: block;
+            }
+        }
+
+        .tool-boxes {
+            position: absolute;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .tool-boxes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            .ucmp-icon-link {
+                font-size: 27px;
+            }
+        }
+        // 参考线
+        .guides-horizontal, .guides-virtical {
+            stroke: $running;
+        }
+    }
+}
+
+// 层次流程拓扑图 左侧资源列表导航
+.hierarchical-digram-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: relative;
+    .left-navbar {
+        width: 240px;
+        height: 100%;
+        overflow: auto;
+    }
+    .right-canvas {
+        width: calc(100% - 240px);
+        height: 100%;
+        position: relative;
+        &.full-width {
+            width: 100%;
+        }
+    }
+
+    ul.resource-nav {
+        list-style: none;
+        .resource-item {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 20px;
+            // padding-left: 16px;
+            &:hover {
+                background: #addff1;
+                opacity: 0.8;
+                cursor: move;
+            }
+            -moz-user-select:none;
+            -webkit-user-select:none;
+            user-select:none;
+        }
+        span.resource-item-text {
+            // bug #UCMP-450【应用编排】编排名称过长时显示问题
+            width: 100%;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &:before {
+                margin-right: 10px;
+                font-size: 20px;
+            }
+        }
+    }
+    .hidden {
+        display: none;
+    }
+}
+
+.hierarchical-digram-box {
+    .top-panel {
+        width: auto;
+        height: 40px;
+        background: $fontWhite;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        z-index: 1000;
+        .moreCanvasBtns-container {
+            // position: relative;
+            margin-left: 219px;
+            line-height: 40px;
+        }
+
+
+    }
+    .zoom-slider {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        height: 40px;
+        z-index: 1000;
+        .manully-scale {
+            width: 120px !important;
+            margin: 0 5px;
+            .el-slider__runway {
+                background: $fontLightGrey;
+            }
+        }
+        .canvas-btn {
+            line-height: 40px;
+            color: $fontContent;
+            &.canvas-btn-import {
+                margin-left: 16px;
+            }
+        }
+    }
+}
+
+// 申请蓝图实例时，拓扑图容器
+.apply-for-blueprint-instance {
+    width: 100%;
+    height: 650px !important;
+    &.bp-details-container {
+        height: auto !important;
+    }
+    &.margin-bottom-10 {
+        margin-bottom: 10px;
+    }
+    .show-all-items-content {
+        width: 100%;
+    }
+}
+
+// UCMP3-1367 申请蓝图实例审批环节不需要padding、margin等间距
+.approve-blueprint-instance-form {
+    min-height: 600px;
+    padding: 0;
+    margin-top: 0;
+    .canvas {
+        height: calc(100% - 56px) !important;
+    }
+    .res-details {
+        height: 100%;
+    }
+}
+
+// 分层配置信息资源列表
+.delete-node-from-group {
+    &:hover {
+        color: $themeColor;
+    }
+}
+
+.config-dynamic-form {
+    margin-bottom: 10px;
+    &.show-all-items {
+        position: relative;
+        left: 20px;
+        width: calc(100% - 30px);
+        padding: 10px;
+    }
+    &.catalog-checked-node {
+        border: 2px solid $themeColor !important;
+    }
+    .service_name {
+        position: absolute;
+        left: -120px;
+        top: 0;
+        width: 120px;
+        padding-right: 10px;
+        text-align: right;
+    }
+    .dynamic-form-item{
+        width: calc(50% - 10px)!important;
+        margin-bottom: 5px;
+        &.combin-block{
+            width: 100%;
+        }
+        .operation-div.add-btn{
+            margin-left: 0;
+        }
+        .combinitem-box{
+            .combinitem-title{
+                text-align: left;
+                width: auto;
+            }
+            .combinitem-body{
+                width: calc(100% - 70px);
+                .dynamic-form-item{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1366px) {
+        &{
+            max-width: 470px;
+            // 审批修改模块
+            &.approve-resource-form {
+                max-width: 100%;
+            }
+            &.show-all-items {
+                max-width: calc(100% - 16px);
+            }
+        }
+    }
+}
+
+.show-all-items-content {
+    width: calc(100% - 335px);
+    height: 100%;
+    overflow-y: auto;
+}
+
+// 蓝图右侧表单样式
+div.node-config {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    .config-forms {
+        width: 250px;
+        .config-title{
+            height: 50px;
+        }
+        .form-content{
+            height: calc(100% - 50px);
+            overflow-y: auto;
+            padding: 10px;
+        }
+    }
+
+    .config-dynamic-form{
+        .dynamic-form-item{
+            width: auto;
+            .combinitem-box {
+                display: block;
+                .combinitem-title{
+                    width: 100%;
+                }
+                .combinitem-body{
+                    width: 100%;
+                    .dynamic-form-item{
+                        width: calc(50% - 10px);
+                    }
+                }
+                .form-body-item {
+                    .operation-div .el-button{
+                        height: 24px;
+                        line-height: 24px;
+                    }
+                }
+                &.tag-combin {
+                    .form-body-item {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.script-form {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    .dynamic-form-item {
+        width: calc(50% - 10px) !important;
+    }
+    .combin-block {
+        width: 100% !important;
+        .el-form-item__content {
+            width: 100%;
+        }
+        .combinitem-box {
+            position: relative;
+            width: 100%;
+            .combinitem-body {
+                display: flex;
+                flex-flow: row nowrap;
+                .el-form-item__content {
+                    width: calc(100% - 120px);
+                }
+                &.appserver {
+                    .el-form-item__label {
+                        width: auto !important;
+                    }
+                    .dynamic-form-item {
+                        white-space: nowrap;
+                    }
+                    .dynamic-form-item:nth-child(1) {
+                        width: calc(100% - 392px) !important;
+                        .el-form-item__label {
+                            width: 120px !important;
+                        }
+                        .el-form-item__content {
+                            width: calc(100% - 120px);
+                        }
+                    }
+                    .dynamic-form-item:nth-child(2) {
+                        width: 150px !important;
+                        .el-form-item__content {
+                            width: calc(100% - 50px);
+                            margin-left: 10px;
+                        }
+                    }
+                    .dynamic-form-item:nth-child(3) {
+                        width: 220px !important;
+                        .el-form-item__content {
+                            width: calc(100% - 50px);
+                            margin-left: 10px;
+                        }
+                    }
+                }
+
+            }
+            .form-body-item {
+                width: 90px;
+                position: absolute;
+                right: -90px;
+                top: 0;
+                .operation-div.pos-btn {
+                    position: relative;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.apply-combin-width {
+    .operation-div.pos-btn {
+        top: 30px;
+        left: 0;
+        right: 0;
+    }
+}
+
+.res-details{
+    // UCMP3-1367 申请蓝图实例资源参数表单宽度扩展为 100%
+    width: 100%;
+    min-width: 650px;
+    &.apply-for-instance {
+        padding: 0 16px;
+    }
+    .config-forms{
+        .config-dynamic-form {
+            .dynamic-form-item {
+                .el-form-item__content{
+                    display: block !important;
+                }
+            }
+        }
+    }
+}
+
+//编辑蓝图icon样式
+.edit-blue-icon-container {
+    margin: 5px;
+    i {
+        cursor: pointer;
+        &:before {
+            font-size: 30px;
+            border: 1px solid #e6e6e6;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        &.active-icon {
+            &:before {
+                border-color: #1c97e7;
+            }
+        }
+    }
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip {
+    padding: 12px;
+    background: #fff;
+    color: $menuItemBgColor;
+    border: 1px solid $menuItemBgColor;
+    border-radius: 2px;
+    min-width: 50px;
+    max-width: 350px;
+    line-height: 20px;
+    pointer-events: none; // UCMP3-2630 修复tooltip闪烁的问题
+
+    /* Style northward tooltips differently */
+    &:before, &:after {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border-color: transparent;
+        border-style: solid;
+        content: " ";
+        pointer-events: none; // UCMP3-2630 修复tooltip闪烁的问题
+    }
+
+    &.n:after {
+        top: 100%;
+        left: 50%;
+        border-width: 10px;
+        margin-left: -10px;
+        border-top-width: 10px;
+        border-bottom-width: 0;
+        border-top-color: #fff;
+    }
+    &.n:before {
+        left: calc(50% - 11px);
+        border-top-color: $menuItemBgColor;
+        border-width: 11px;
+        border-bottom-width: 0;
+        top: 100%;
+    }
+    &.s:after {
+        left: 50%;
+        border-width: 10px;
+        border-top-width: 0;
+        top: -10px;
+        margin-left: -10px;
+        border-bottom-width: 10px;
+        border-bottom-color: #fff;
+        border-top-width: 0;
+    }
+    &.s:before {
+        left: calc(50% - 11px);
+        top: -11px;
+        border-bottom-color: $menuItemBgColor;
+        border-width: 11px;
+        border-top-width: 0;
+    }
+}

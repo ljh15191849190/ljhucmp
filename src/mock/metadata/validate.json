@@ -1,0 +1,227 @@
+{
+    "support_providers": [
+        "vmware_vsphere",
+        "openstack",
+        "qingcloud"
+    ],
+    "value_field": "volume_id",
+    "group": "storage",
+    "name": "云硬盘",
+    "service_code": "volume",
+    "attribute": [
+        {
+            "multiple": false,
+            "description": "实例ID",
+            "created": false,
+            "query_condition": false,
+            "required": true,
+            "quota": false,
+            "modified": false,
+            "table_column": true,
+            "key": "volume_id",
+            "relate_created": false,
+            "label": "实例ID",
+            "type": "string"
+        },
+        {
+            "multiple": false,
+            "description": "所属云主机",
+            "created": true,
+            "bp_disable": true,
+            "query_condition": true,
+            "required": false,
+            "quota": false,
+            "modified": false,
+            "table_column": false,
+            "key": "ecs_instance_id",
+            "relate_created": false,
+            "label": "所属云主机",
+            "type": "string"
+        },
+        {
+            "multiple": false,
+            "description": "名称",
+            "created": true,
+            "query_condition": true,
+            "required": true,
+            "quota": false,
+            "modified": false,
+            "label": "名称",
+            "table_column": true,
+            "key": "instance_name",
+            "relate_created": false,
+            "validation": {
+                "max": "150",
+                "err_msg": "云硬盘名称必填，且可以为英文大小写字符、数字、-、_以及中文字符，最多不能超过100个字符",
+                "reg": "/^[\\w\\-\u4e00-\u9fa5]{1,100}$/",
+                "min": "1"
+            },
+            "type": "string"
+        },
+        {
+            "multiple": false,
+            "description": "状态",
+            "created": false,
+            "query_condition": true,
+            "required": true,
+            "quota": false,
+            "modified": false,
+            "table_column": true,
+            "key": "status",
+            "relate_created": false,
+            "label": "状态",
+            "type": "string",
+            "enum": [
+                {
+                    "id": "in_use",
+                    "name": "使用中",
+                    "style": "success"
+                },
+                {
+                    "id": "available",
+                    "name": "未挂载",
+                    "style": "default"
+                },
+                {
+                    "id": "error",
+                    "name": "错误",
+                    "style": "error"
+                },
+                {
+                    "id": "unknown",
+                    "name": "未知",
+                    "style": "primary"
+                }
+            ]
+        },
+        {
+            "multiple": false,
+            "description": "容量（GB）",
+            "billing": true,
+            "created": true,
+            "query_condition": false,
+            "required": true,
+            "quota": true,
+            "modified": true,
+            "label": "容量",
+            "table_column": true,
+            "key": "size",
+            "relate_created": true,
+            "validation": {
+                "max": 200,
+                "min": 40
+            },
+            "type": "integer",
+            "unit": "GB"
+        },
+        {
+            "multiple": false,
+            "description": "类型",
+            "billing": true,
+            "created": false,
+            "query_condition": false,
+            "required": true,
+            "quota": false,
+            "modified": false,
+            "table_column": true,
+            "key": "catalog",
+            "relate_created": false,
+            "label": "类型",
+            "type": "string"
+        }
+    ],
+    "related_service": [
+        {
+            "leading": true,
+            "refer_type": "m:o",
+            "service_code": "ecs"
+        }
+    ],
+    "normal_actions": {
+        "create": {
+            "endpoint": {
+                "url": "service/volume",
+                "method": "POST"
+            },
+            "enabled": true,
+            "roles": [],
+            "support_providers": [
+                "vsphere",
+                "openstack",
+                "aliyun"
+            ]
+        },
+        "modify": {
+            "endpoint": {
+                "url": "service/volume",
+                "method": "PUT"
+            },
+            "enabled": true,
+            "roles": [],
+            "support_providers": [
+                "vsphere",
+                "openstack",
+                "aliyun"
+            ]
+        },
+        "sync": {
+            "endpoint": {
+                "url": "service/volume/sync",
+                "method": "POST"
+            },
+            "enabled": true,
+            "roles": [],
+            "support_providers": [
+                "vsphere",
+                "openstack",
+                "aliyun"
+            ]
+        },
+        "delete": {
+            "enabled": true,
+            "endpoint": {
+                "url": "/ucmp3/resource_instance/:service_code/delete",
+                "method": "delete"
+            },
+            "multiple": true,
+            "description": "删除云主机",
+            "label": "删除",
+            "name": "delete"
+        }
+    },
+    "actions": [
+        {
+            "endpoint": {
+                "url": "service/volume/attach",
+                "method": "POST"
+            },
+            "multiple": false,
+            "description": "将该硬盘挂载到云主机",
+            "support_providers": [
+                "vsphere",
+                "openstack",
+                "aliyun"
+            ],
+            "label": "挂载",
+            "name": "attach"
+        },
+        {
+            "endpoint": {
+                "url": "service/volume/detach",
+                "method": "POST"
+            },
+            "multiple": false,
+            "description": "从云主机上卸载该硬盘",
+            "support_providers": [
+                "vsphere",
+                "openstack",
+                "aliyun"
+            ],
+            "label": "卸载",
+            "name": "detach"
+        }
+    ],
+    "text_field": "instance_name",
+    "instance_apply_count": 50,
+    "description": "云硬盘服务"
+}

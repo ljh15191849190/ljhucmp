@@ -1,0 +1,119 @@
+/*************************** 申请单确认 start **********************************/
+.form-detail-container {
+    margin: 0 16px;
+    .details {
+        margin-top: 10px;
+        padding: 0 16px;
+        background: #fff;
+        .dark-bg{
+            background: #f9f9f9;
+        }
+    }
+    .service-title {
+        // width: 100px;
+        margin: 0 0 5px 0;
+    }
+    .attribute-name {
+        width: 120px;
+        text-align: right;
+        margin-right:10px;
+        color: $fontTitleLight;
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .attribute-value {
+        width: calc(100% - 50px);
+        font-size: 12px;
+        line-height: 22px;
+        word-break: break-all;
+    }
+}
+
+/*************************** 申请单确认 end **********************************/
+
+// 蓝图审批修改参数，表单内容自适应显示滚动条
+/*********** 基础配置审批内容，已废弃 start ****************/
+.bp_config_forms {
+    // width: calc(100% - 300px);
+    max-height: 600px;
+    overflow-y: auto;
+    padding-right: 350px;
+    overflow-x: hidden;
+    .blueprint-title{
+        right: 40px !important;
+        top: calc(20% - 40px) !important;
+    }
+    .canvas{
+        right: 40px !important;
+        top: 20% !important;
+    }
+    form.el-form {
+        overflow-x: initial;
+    }
+    .res-details{
+        min-width: 600px;
+        .config-forms{
+            .config-dynamic-form.show-all-items{
+                left: 70px;
+                .basic-form{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .allocate-formItem{
+        display: block;
+        width: 100%;
+        .el-form-item{
+            &:nth-child(1){
+                display: block;
+                position: relative;
+                .tip-icon{
+                    position: absolute;
+                    right: -50px;
+                    top: 0;
+                }
+            }
+            width: calc(50% - 10px);
+            .el-form-item__content{
+                width: 100%;
+            }
+        }
+    }
+}
+/*********** 基础配置审批内容，已废弃 end ****************/
+
+/***************************** 申请单表单 start **************************/
+.business-form {
+    background: #fff;
+    // margin-bottom:10px;
+    padding: 20px;
+    .child-form-title {
+        // width: 10%;
+        background: #fff;
+        color: #333;
+    }
+    .business-form-body {
+        width: 50%;
+        min-width: 650px;
+        margin: 0 auto;
+        .combinitem-title{
+            width: 120px;
+            text-align: right;
+            padding-right: 12px;
+            font-size: 12px;
+            margin: 0;
+        }
+        .combinitem-body {
+            width: calc(100% - 90px);
+            @media screen and (min-width: 1920px){
+                width: calc(100% - 260px);
+            }
+            .form-item-inline{
+                vertical-align: top;
+                width: calc(50% - 10px);
+            }
+        }
+    }
+}
+/***************************** 申请单表单 end **************************/

@@ -1,0 +1,590 @@
+// 列表
+@mixin bg-color($bg:success){
+    @if ($bg == success) {
+        background-color: #79c762;
+    }
+    @else if($bg == failure) {
+        background-color: #fa4b48;
+    }
+    @else if($bg == stop) {
+        background-color: #ababab;
+    }
+    @else if($bg == other) {
+        background-color: #6e8096;
+    }
+    @else if($bg == out-success) {
+        background-color: #d5fbca;
+    }
+    @else if($bg == out-failure) {
+        background-color: #f8d4c8;
+    }
+    @else if($bg == out-stop) {
+        background-color: #eeeeee;
+    }
+    @else {
+        background-color: #e3f0ff;
+    }
+}
+.cloud-provider-container {
+    display: flex;
+    flex-wrap: wrap;
+    .cloud-provider-item {
+        margin:  0 7.5px 15px;
+        width: calc(50% - 22px);
+        display: flex;
+        flex-direction: column;
+        background-color:$fontWhite;
+        max-height: 240px;
+        .cloud-provider-content {
+            display: flex;
+            align-items: center;
+            padding: 0px 10px;
+            .cloud-info {
+                padding: 25px 0px;
+                width: 100px;
+                border-right: 1px solid $borderColor;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .cloudprovider-name {
+                    padding-top: 15px;
+                    width: 100px;
+                    text-align: center;
+                    overflow:hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                &:hover {
+                    color: $themeColor;
+                }
+                .sangfor {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -0px -200px;
+                    width: 50px;
+                    height: 47px;
+                }
+                .juniper {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -455px -55px;
+                    width: 40px;
+                    height: 38px;
+                }
+                .vmware_vsphere {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -262px -14px;
+                    width: 70px;
+                    height: 60px;
+                }
+                .qingcloud {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -15px -145px;
+                    width: 60px;
+                    height: 57px;
+                }
+                .openstack {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -188px -13px;
+                    width: 56px;
+                    height: 59px;
+                }
+                .XenServer {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -112px -140px;
+                    width: 90px;
+                    height: 56px;
+                }
+                .Scvmm {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -324px -148px;
+                    width: 86px;
+                    height: 70px;
+                }
+                .Azure {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -88px -12px;
+                    width: 86px;
+                    height: 55px;
+                }
+                .QCloud {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -360px -14px;
+                    width: 56px;
+                    height: 59px;
+                }
+                .alicloud {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -21px -16px;
+                    width: 56px;
+                    height: 59px;
+                }
+                .bigip {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -415px -147px;
+                    width: 56px;
+                    height: 59px;
+                }
+                .netapp {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -276px -190px;
+                    width: 56px;
+                    height: 59px;
+                }
+                .oracle_rac {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -346px -212px;
+                    width: 60px;
+                    height: 40px;
+                }
+                .cloudboot{
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -96px -187px;
+                    width: 56px;
+                    height: 59px;
+                }
+                .citrix {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -4px -84px;
+                    width: 56px;
+                    height: 59px;
+                }
+                .tencentcloud {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -360px -8px;
+                    width: 56px;
+	                height: 63px;
+                }
+                .ac {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -351px -222px;
+                    width: 49px;
+	                height: 28px;
+                }
+                .sangfor_hci {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -1px -202px;
+                    width: 45px;
+	                height: 45px;
+                }
+                .sangfor_vss {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -51px -202px;
+                    width: 47px;
+	                height: 45px;
+                }
+                .juniper {
+                    display: inline-block;
+                    background-image: url(../../../static/images/cloudProvider-img.png);
+                    background-repeat: no-repeat;
+                    background-position: -457px -59px;
+                    width: 40px;
+	                height: 33px;
+                }
+            }
+            .cloud-source {
+                padding: 25px 0px;
+                width: 100%;
+                .el-carousel__item {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                }
+                .cloud-source-item {
+                    padding-top: 10px;
+                    padding-left: 10px;
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+
+                    @media screen and (max-width: 1920px){
+                        .cloud-source-pad-right {
+                            padding-right: 30px;
+                        }
+                    }
+                    @media screen and (max-width: 1680px){
+                        .cloud-source-pad-right {
+                            padding-right: 5px;
+                        }
+                    }
+                    @media screen and (max-width: 1366px){
+                        .cloud-source-pad-right {
+                            padding-right: 2px;
+                        }
+                    }
+                    .cloud-out-status {
+                        margin-left: 10px;
+                        margin-right: 5px;
+                        width: 20px;
+                        height: 20px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .cloud-in-status {
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                        }
+                        .success {
+                            @include bg-color(success);
+                        }
+                        .stop {
+                            @include bg-color(stop);
+                        }
+                        .failure {
+                            @include bg-color(failure);
+                        }
+                        .other {
+                            @include bg-color(other);
+                        }
+                    }
+                    .out-success {
+                        @include bg-color(out-success);
+                    }
+                    .out-failure {
+                        @include bg-color(out-failure);
+                    }
+                    .out-stop {
+                        @include bg-color(out-stop);
+                    }
+                    .out-other {
+                        @include bg-color(out-other);
+                    }
+                }
+            }
+        }
+        .cloud-provider-bottom {
+            padding-left: 10px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid $borderColor;
+            .status {
+                color: $fontContent;
+            }
+        }
+    }
+}
+
+// 详情
+.detail-cloud-provider {
+    padding: 10px 0px;
+    border-bottom: 1px solid $borderColor;
+    .label {
+        display: inline-block;
+        width: 160px;
+        text-align: right;
+        font-weight: bold;
+        color: $fontContent;
+    }
+}
+//详情拓扑
+/**************** multi links of network end ********************/
+.zoom-div {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+/******************** tidy tree **************************/
+$activeBgColor: $themeColor;
+$diagramLinkColor: $borderColorForGrayBg;
+
+.d3-tree {
+    .node rect.node_rect {
+        rx: 11;
+        ry: 11;
+        fill: $activeBgColor;
+        &.children {
+            fill: $activeBgColor;
+            fill-opacity: 0.7;
+            stroke: $activeBgColor;
+            stroke-width: 2px;
+        }
+    }
+
+    .node text.node_text {
+        font: 14px sans-serif;
+        fill:$fontWhite;
+    }
+
+    .link {
+        fill: none;
+        stroke: $diagramLinkColor;
+        stroke-width: 1px;
+    }
+    .node-pointer {
+        cursor: pointer;
+    }
+    .field_value {
+        text {
+            font: 14px sans-serif;
+            fill: $fontContent !important;
+        }
+    }
+    .value_rect {
+        fill: transparent;
+        rx: 11;
+        ry: 11;
+        &.no-height {
+            height: 0 !important;
+        }
+    }
+    textPath {
+        font: 12px sans-serif;
+        fill: $fontContent !important;
+    }
+}
+
+//创建云厂商
+//第一步：选择云厂商
+@mixin bac-span-content(){
+    background: $navbarSelectedBgColor;
+    opacity: 0.3;
+    z-index: 99;
+}
+.select-cloud-container {
+    height: 100%;
+    .selectCloudProvider {
+        height: calc(100% - 16px);
+        background-color:$fontWhite;
+        .title {
+            color: $fontContent;
+            height: 46px;
+            line-height: 46px;
+            padding-left: 20px;
+            border-bottom: 1px solid $borderColor;
+        }
+        .provider-title {
+            margin: 30px 0 0 5px;
+            font-size: 14px;
+            color: $fontContent;
+            padding-left: 25px;
+        }
+        .provider-content {
+            height: calc(100% - 50px);
+        }
+        .provider_public, .provider_private {
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 20px;
+            height: 110px;
+            line-height: 110px;
+            border: 1px solid $borderColor;
+            .bac-span {
+                display: inline-block;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+            &:hover .bac-span:not(.coming-soon_provider){
+                @include bac-span-content
+            }
+            &.actived_provider {
+                .bac-span {
+                   @include bac-span-content
+                }
+                position: relative;
+                .checked_tick {
+                    z-index: 100;
+                    position: absolute;
+                    right: 5px;
+                    width: 55px;
+                    height: 55px;
+                    background:$fontWhite;
+                    border-radius: 50%;
+                    top: 5px;
+                    .tick {
+                        position: absolute;
+                        left: 20px;
+                        top: 10px;
+                        width: 15px;
+                        height: 25px;
+                        border: solid $navbarSelectedBgColor;
+                        border-width: 0 4px 4px 0;
+                        transform: rotate(45deg);
+                    }
+                }
+            }
+        }
+    }
+    .cloud-provider-bottom {
+        height: 60px;
+        background-color: $fontWhite;
+        position: fixed;
+        bottom: 0;
+        left: 190px;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 30px;
+    }
+}
+
+//第二步：API配置
+.cloud-container-conf {
+    height: calc(100% - 16px);
+    .cloud-conf-container {
+        height: 100%;
+        background-color:$fontWhite;
+        .title {
+            color: $fontContent;
+            height: 46px;
+            line-height: 46px;
+            padding-left: 20px;
+            border-bottom: 1px solid $borderColor;
+        }
+        .cloud-conf-table {
+            padding: 20px 0px;
+            height: calc(100% - 46px);
+        }
+    }
+    .cloud-provider-bottom {
+        height: 60px;
+        background-color:$fontWhite;
+        position: fixed;
+        bottom: 0;
+        left: 190px;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 30px;
+    }
+}
+.el-select {
+    width: 100%;
+}
+
+.inner-select-width {
+    width: 80px;
+}
+
+//第三步: 同步资源池
+.cloud-source-pool {
+    height: 100%;
+    .source-pool-container {
+        height: calc(100% - 90px);
+        background-color:$fontWhite;
+        .title {
+            color: $fontContent;
+            height: 46px;
+            line-height: 46px;
+            padding-left: 20px;
+            border-bottom: 1px solid $borderColor;
+        }
+        .source-pool-content {
+            height: calc(100% - 46px);
+            padding-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .control-label {
+                padding-bottom: 30px;
+            }
+            .status {
+                padding-top: 10px;
+            }
+        }
+    }
+    .cloud-provider-bottom {
+        height: 56px;
+        background-color:$fontWhite;
+        position: fixed;
+        bottom: 0;
+        left: 190px;
+        right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 30px;
+    }
+}
+
+@each $provider in (Azure, 'Aliyun', 'VMWare', 'QingCloud', 'OpenStack', 'XenServer', 'QCloud'){
+    .#{$provider}-icon{
+        display: inline-block;
+        background-image: url(../../../static/images/cloudProvider-img.png);
+        background-repeat: no-repeat;
+        background-position: -350px -74px;
+        width: 20px;
+        height: 15px;
+    }
+}
+
+//同步规则
+.rule-pane {
+    .rule-content {
+        height: 500px;
+        padding: 16px;
+        display: flex;
+        justify-content: space-around;
+        .form-pane {
+            width: 65%;
+        }
+        .temp-pane {
+            width: 25%;
+            padding: 10px 15px;
+            overflow-y: auto;
+            .rule-item {
+                cursor: pointer;
+                margin-top: 20px;
+                height: 35px;
+                line-height: 35px;
+                text-align: center;
+                width: 100%;
+                background-color: #f3f3f3;
+                &.active {
+                    background-color: $themeColor;
+                    color:$fontWhite;
+                }
+            }
+        }
+        .detail {
+            margin-top: 6px;
+        }
+    }
+    .rule-footer {
+        padding-left: 415px;
+    }
+}

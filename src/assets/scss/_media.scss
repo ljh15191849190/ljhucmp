@@ -1,0 +1,120 @@
+
+/****************** 小屏幕下响应式开发 **********************/
+@media screen and (max-width: 1366px){
+    // 全局字体大小
+    html, body{
+        font-size: $fontsize12;
+    }
+    // 申请单输入框
+    .rw-input{
+        .el-select,.el-date-editor.el-input, .el-date-editor.el-input__inner, .el-cascader, .el-input, .el-textarea, .multiple-form-items-container {
+            max-width: 380px;
+            &.el-date-editor--daterange{
+                max-width: 380px;
+            }
+        }
+    }
+    .business-form{
+        .business-form-body{
+            min-width: 550px;
+        }
+    }
+
+    .res-details{
+        min-width: 550px;
+    }
+    //*****************计费策略****************//
+    .billing-container{
+        .form {
+            max-width: 500px;
+        }
+        .select-width {
+            max-width: 375px !important;
+        }
+    }
+    //***************设备管理****************//
+    .device-form{
+        .form-width {
+            max-width: 400px !important;
+        }
+        .half-item-width {
+            width: 165px;
+        }
+        .flavor-value-error {
+            margin-left: 185px;
+        }
+    }
+    .breadcrumb-container {
+        padding-bottom: 8px;
+        padding-top: 8px;
+    }
+    .creat-button{
+        height: 23px !important;
+        padding: 6px 15px !important;
+        margin-top: 6px !important;
+    }
+    .ucmp-content {
+        height: calc(100% - 46px) !important;
+        .top-button-container {
+            top: -4px;
+        }
+        // 申请服务实例页面
+        .fixed-bottom-btns {
+            height: 50px !important;
+        }
+        .full-with-fixed-container {
+            height: calc(100% - 40px) !important;
+        }
+
+        .form-detail-container {
+            margin: 0 0 0 8px!important;
+        }
+    }
+    .instance-form.blueprint-instance-form {
+        width: calc(100% - 340px);
+        .canvas {
+            padding: 0 !important;
+        }
+    }
+}
+
+/****************** 大屏幕下响应式开发 **********************/
+@media screen and (min-width: 1600px) {
+    .instance-form.blueprint-instance-form{
+        width: 850px !important;
+        .canvas {
+            width: calc(100% - 855px) !important;
+        }
+        .blueprint-title {
+            width: calc(100% - 855px) !important;
+        }
+        .instance-form-detail {
+            width: calc(100% - 855px) !important;
+        }
+    }
+    .blueprint-detail-panel-diagram {
+        width: 450px !important;
+    }
+    // .blueprint-item-card {
+    //     width: calc(100% - 465px) !important;
+    // }
+    // UCMP3-1367 蓝图实例审批环节，针对大屏显示优化
+    .approve-blueprint-instance-form {
+        min-height: 600px;
+        .res-details {
+            width: 1050px !important;
+            .show-all-items-content {
+                width: 100%;
+            }
+        }
+        .canvas {
+            width: calc(100% - 1055px) !important;
+        }
+        .blueprint-title {
+            width: calc(100% - 1055px) !important;
+        }
+        .instance-form-detail {
+            width: calc(100% - 1055px) !important;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+/**
+ * @description 云基础架构
+ */
+.iaas {
+    .triple-cell .el-form-item.required .el-form-item__label::before {
+        content: '*';
+        color: $danger;
+        margin-right: 4px;
+    }
+}
+
+//基础设置配置
+.allocate-form {
+    // padding-left: 150px;
+    width: 65%;
+    margin: 0 auto;
+    .sub-title {
+        font-size: 18px;
+        color: $fontTitleLight;
+        padding-top: 20px;
+        margin-left: -90px;
+    }
+    .network-btn {
+        position: absolute;
+        font-size: 25px;
+        margin-left: 20px;
+        cursor: pointer;
+        &.remove {
+            color: $cancelBgColor;
+            &:hover {
+               color: $fontOrange;
+            }
+        }
+        &.plus {
+            color: $themeColor;
+            &.active {
+                margin-left: 60px;
+            }
+        }
+    }
+
+    .network-container {
+        .netItem-container {
+            .network-form {
+                max-width: 250px!important;
+            }
+            .opr-btn-pane {
+                margin-left: 20px!important;
+            }
+        }
+    }
+
+    .isTotip {
+        margin-left: 5px;
+    }
+    .tip-icon {
+        padding-left: 3px;
+    }
+}
+
+// 设置一些全局样式
+.w200{
+    width: 200px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.mt10{
+    margin-top: 10px;
+}

@@ -1,0 +1,147 @@
+/**
+* elelemnt 样式覆盖优化
+* @author xinghua.wen
+*/
+
+/* 改变主题色变量 */
+$--color-primary: $themeColor;
+$--color-text-placeholder: #c2c2c2;
+$--color-text-regular: $fontContent;
+$--color-danger: #f86255;
+$--color-warning: #ffaa00;
+$--color-primary-light-7: #0473d3;
+$--table-header-background: #f7f7f7;
+$--table-current-row-background: #f5f5f5;
+$--input-number-increase-decrease-bg: #f2f2f2;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+
+.el-radio-group {
+    vertical-align: baseline;
+}
+.checked-node {
+    color: #FF7940;
+}
+.no-border {
+    input.el-input__inner {
+        border: 0;
+    }
+}
+
+//table 滚动条问题
+.el-table {
+    width: 100%;
+    height: 100%;
+    thead{
+        color: $fontContent;
+    }
+    // UCMP3-1416 表格布局优化：行间距减小
+    th {
+        padding: 5px 0;
+        background: $borderLightColor;
+    }
+    td {
+        padding: 2px 0;
+    }
+    &.el-table--border {
+        border-color: transparent !important;
+        th {
+            border-right-color: #fff;
+        }
+        td {
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    .el-table--border, .el-table--group {
+        &:after {
+            background-color: transparent !important;
+        }
+    }
+}
+.el-table__body-wrapper {
+    height: calc(100% - 34px);
+    //安装最新的element-ui 2.3.2后滚动条设置
+    overflow-y: auto;
+}
+// .el-table--summary 用于加了总计的表格上
+.el-table--summary {
+    .el-table__body-wrapper {
+        height: calc(100% - 62px);
+    }
+}
+//dialog
+.el-dialog{
+    border-radius:5px;
+    box-shadow:5px 5px 15px $fontContentGray;
+    .el-dialog__header {
+        background:#d5ebff;
+        border-radius:5px 5px 0 0;
+    }
+}
+.el-dialog__footer {
+    border-top: 1px solid #e1e5e6;
+}
+.el-table--small {
+    font-size: 13px;
+}
+/******* 复选框改为圆形 ********/
+.el-checkbox.circle {
+    .el-checkbox__input .el-checkbox__inner {
+        border-radius: 50%;
+    }
+}
+/******* 列表页面筛选表单 ********/
+.filter-form {
+    width: calc(100% - 50px) !important;
+    .el-form-item--small.el-form-item {
+        margin-bottom: 6px !important;
+    }
+}
+/******* 表单按钮 ********/
+.el-button--warning.is-plain {
+  background: $fontWhite;
+}
+/******* reset input-number 样式 ********/
+.el-input-number .el-input-number__increase {
+    border-bottom: none !important;
+}
+.el-input-number__increase, .el-input-number__decrease {
+    background-color: $--input-number-increase-decrease-bg;
+    font-size: 18px;
+}
+
+/******* reset radio 样式 ********/
+.el-radio__label {
+    padding-left: 5px;
+}
+.el-radio__input.is-checked + .el-radio__label {
+    color: $fontContent;
+}
+
+/******* reset tree active background样式 ********/
+.el-tree-node:focus>.el-tree-node__content{
+    background-color: rgba($themeColor, 0.2)
+}
+
+// UCMP-488 针对 el-notification 组件中英文字符排版错乱的问题
+.el-notification {
+    .el-notification__content {
+        p {
+            word-break: break-all;
+        }
+    }
+}
+
+// UCMP3-2825 面包屑显示优化
+.ucmp-breadcrumb-item.el-breadcrumb__item {
+    max-width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    .el-breadcrumb__inner {
+      white-space: nowrap;
+    }
+}

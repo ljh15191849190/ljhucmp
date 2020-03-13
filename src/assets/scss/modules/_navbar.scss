@@ -1,0 +1,56 @@
+
+.ucmp-navbar-icon {
+    vertical-align: middle;
+    display: inline-block;
+    width: 24px;
+    font-size: 20px;
+    margin-right: 5px;
+}
+// 展开按钮样式
+.collapse-switch{
+    width: $menuLargeWidth;
+    height: $menuHeight;
+    background: $menuItemBgColor;
+    color: $navBarcolor;
+    border-bottom: 1px solid $menuBgColor;
+    .collapse-btn{
+        cursor: pointer;
+        position: absolute;
+        right: 10px;
+        top: 6px;
+        // width: 16px;
+        // height: 16px;
+        font-size: 18px;
+    }
+    &.btn-mini-width{
+        width: $menuSmallWidth;
+        text-align: center;
+        .collapse-btn{
+            position: relative;
+            top: 10px;
+            right: 0;
+            transform: rotate(90deg);
+        }
+    }
+}
+// 右边箭头
+/*.el-submenu.is-active, .el-menu-item.dashboard-menu.is-active{
+    position: relative;
+    &:after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 12px;
+        display: inline-block;
+        border-width: 8px 10px;
+        border-style: solid;
+        border-color: transparent;
+        border-right-color: #eef1f5;
+    }
+}*/
+
+// 收起导航时右侧区域的宽度
+.more-width {
+    margin-left: $menuSmallWidth;
+    width: calc(100% - #{$menuSmallWidth});
+}

@@ -1,0 +1,413 @@
+.dash-chart-container {
+    height: 300px;
+    background:$fontWhite;
+    margin-bottom: 10px;
+    &:hover {
+        box-shadow: 0 0 15px $fontContentGray;
+    }
+}
+.dashboard-tabs {
+    width: 100%;
+    background:$fontWhite;
+    padding: 0 15px 15px 15px;
+    height: calc(100% - 62px);
+    .el-tabs__content {
+        height: calc(100% - 55px);
+        overflow-y: auto;
+        .el-tab-pane {
+            height: 100%;
+        }
+    }
+}
+.flex-box {
+    cursor: pointer;
+    width: 50%;
+    height: 55px;
+    line-height: 38px;
+    vertical-align: middle;
+    white-space: nowrap;
+    &:nth-child(2n + 1) {
+        border-right: 1px solid $borderBottom;
+    }
+    .service-logo {
+        float: left;
+        width: 30px;
+        height: 100%;
+        font-size: 30px;
+        line-height: 57px;
+        text-align: center;
+        margin: 0 10px 0 30px;
+    }
+    .service-name {
+        float: left;
+        width: calc(100% - 100px);
+        height: 100%;
+        line-height: 55px;
+        font-size: 12px;
+        text-indent: 10px;
+    }
+    &:hover .service-logo,
+    &:hover .service-name {
+        color: $themeColor;
+    }
+}
+
+.chart-header {
+    cursor: all-scroll;
+    white-space: nowrap;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px 0 30px;
+    font-size: 14px;
+    text-align: left;
+    &.chart-header-gray{
+        background: $grayBgColor;
+    }
+}
+
+.chart-container {
+    height: calc(100% - 50px);
+}
+
+// 响应式布局
+@media screen and (min-width: 1510px) {
+    .dash-chart-container {
+        width: calc(33.333333% - 10px);
+        margin-right: 10px;
+    }
+}
+@media screen and (min-width: 1050px) and (max-width: 1510px) {
+    .dash-chart-container {
+        width: calc(50% - 5px);
+        &:nth-child(2n + 1) {
+            margin-right: 10px;
+        }
+    }
+}
+@media screen and (max-width: 1050px) {
+    .dash-chart-container {
+        width: 100%;
+    }
+}
+
+// 我的业务
+.application-section {
+    .top-count {
+        .float-right {
+            .total-count {
+                color: rgb(170, 32, 32);
+            }
+        }
+    }
+}
+// 我的应用
+.business-section {
+    .business-item {
+        .cost-count {
+            font-size: 16px;
+            font-weight: 600;
+            color: red;
+        }
+    }
+    .app-logo-color {
+        color: $fontContent;
+        font-size: 16px;
+        &:hover {
+            color: $fontOrange;
+        }
+    }
+    .label-text {
+        color: $chartCardDeepBlue;
+    }
+}
+.text_cost-count {
+    color: red;
+}
+// 组织
+.org-cot {
+    .logo-img {
+        color: $chartCardDeepBlue;
+    }
+}
+.bot-more-text {
+    span {
+        line-height: 30px;
+        font-size: 12px;
+        color: $fontTitleLight;
+        cursor: pointer;
+        &:hover {
+            color: $themeColor;
+        }
+    }
+}
+.circle-point {
+    &.running {
+        background: $runningLighterIcon;
+        &:before {
+            background: $runningIcon;
+        }
+    }
+    &.error {
+        background: $errorLighterIcon;
+        &:before {
+            background: $errorIcon;
+        }
+    }
+    &.stoped {
+        background: $stopedLighterIcon;
+        &:before {
+            background: $stopedIcon;
+        }
+    }
+    &.others {
+        background: $otherLighterIcon;
+        &:before {
+            background: $otherIcon;
+        }
+    }
+}
+.dashboard-tabs {
+    width: 100%;
+    background:$fontWhite;
+    padding: 0 15px 15px 15px;
+    height: calc(100% - 62px);
+}
+.handle-btn {
+    &:hover {
+        border-color: transparent;
+        background: $themeColor !important;
+        color: $fontWhite !important;
+    }
+}
+.dashboard-top-btns {
+    background: linear-gradient(to bottom, $globalBgColor 70%, transparent 100%);
+}
+.show-more {
+    cursor: pointer;
+    &:hover {
+        color: $themeColor !important;
+    }
+}
+// 大屏告警 统计样式
+.big-screen {
+    background: #12172e;
+    font-size: 12px;
+    height: 100%;
+    overflow-y: hidden;
+    width: 100vw;
+    .top-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 42px;
+        width: 100%;
+        z-index: -1;
+        background: url(../../../static/images/bigScreen/bg-top.png) repeat;
+    }
+    .alarm_total {
+        color: $purple !important;
+    }
+    .alarm_info {
+        color: $chartCardBlue !important;
+    }
+    .alarm_warning {
+        color: $chartCardBgOrange !important;
+    }
+    .alarm_danger {
+        color: $danger !important;
+    }
+    .alarm-detail {
+        padding: 15px 0;
+        .big_screen_table {
+            background: transparent !important;
+            width: 95%;
+            height: 100%;
+            margin: 0 auto;
+            &.el-table {
+                color: $fontTitleLight;
+                thead {
+                    color: $fontWhite !important;
+                }
+                tr,
+                th {
+                    background: transparent !important;
+                }
+                th.is-leaf,
+                td {
+                    border-bottom-color: $fontContent;
+                }
+            }
+            &.el-table--enable-row-hover .el-table__body tr:hover > td {
+                background: $fontTitle;
+                color: $borderBottom;
+            }
+            ::-webkit-scrollbar-track-piece {
+                background: transparent !important;
+            }
+        }
+    }
+    .top-label {
+        color:$fontWhite;
+        font-size: 40px;
+        z-index: 5;
+        .middle-bg {
+            width: 100%;
+            height: 94px;
+            padding-top: 20px;
+            margin: 0 auto;
+            z-index: 1;
+            background: url(../../../static/images/bigScreen/top-main.png) center center no-repeat;
+        }
+        .item-bg {
+            height: 44px;
+            width: calc(90% - 1430px);
+            // background: url(../../../static/images/bigScreen/bg-top.png) repeat;
+            &.ab-left,
+            &.ab-right,
+            &.ab-left1,
+            &.ab-right1 {
+                position: absolute;
+                top: 0;
+                z-index: -1;
+            }
+            &.ab-left {
+                left: 70px;
+            }
+            &.ab-right {
+                right: 70px;
+            }
+            &.ab-left1,
+            &.ab-right1 {
+                width: 70px;
+                height: 44px;
+                z-index: 10;
+            }
+        }
+    }
+    .time-title {
+        position: absolute;
+        z-index: 100;
+        right: 30px;
+        top: 10px;
+        color: #a4ccfe;
+        font-size: 1.2em;
+    }
+    .bot-chart {
+        padding: 15px 20px 30px 20px;
+        height: calc(100% - 75px);
+        .col-box {
+            height: 100%;
+            padding: 10px;
+            .box-header {
+                height: 35px;
+                line-height: 35px;
+                padding: 0 15px;
+                color: rgba(255, 255, 255, 0.85);
+                font-size: 1.3em;
+                background: linear-gradient(to right, #0845a9, transparent 70%);
+            }
+            .left-top,
+            .left-bot,
+            .alarm-box,
+            .monitor-box {
+                border: 1px solid #295cb9;
+                background: #171819;
+                // border-image: url(../../../static/images/bigScreen/border-image.png) 10px repeat;
+                box-shadow: 0px 0px 27px #092d7e inset;
+                &.alarm-box {
+                    height: 100%;
+                    background: url(../../../static/images/bigScreen/lattice.png) repeat;
+                    .alarm-info {
+                        padding: 0 20px;
+                        height: 95px;
+                        .alarm-item {
+                            display: inline-block;
+                            height: 95px;
+                            width: calc(25% - 10px);
+                            background: #232629;
+                            text-align: center;
+                            padding: 10px 0;
+                            span:nth-child(1) {
+                                font-size: 2.2em;
+                                display: block;
+                            }
+                            span:nth-child(2) {
+                                font-size: 1.2em;
+                                line-height: 1.6em;
+                            }
+                        }
+                    }
+                }
+                &.monitor-box {
+                    height: 100%;
+                }
+            }
+            .left-top,
+            .left-bot {
+                // border: 1px solid $borderBottom;
+                height: calc(50% - 15px);
+            }
+            .left-bot {
+                .chart-panel {
+                    height: calc(100% - 35px);
+                }
+            }
+            .left-top {
+                position: relative;
+                margin-bottom: 30px;
+                .resource-box {
+                    padding: 0 30px;
+                    padding-top: 10px;
+                    height: calc(75% - 35px);
+                    .resource-bar {
+                        height: 33%;
+                        .progress-bar {
+                            margin-top: 5px;
+                        }
+                    }
+                    .resource-name {
+                        color: #a4ccfe;
+                        font-size: 1.3em;
+                        margin-right: 10px;
+                    }
+                    .resource-detail {
+                        color: #6882ad;
+                    }
+                }
+                .resource-bottom{
+                    height: 25%;
+                    width: 100%;
+                    color: #6882ad;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    .row-top-border {
+                        border-top: 1px solid $fontContent;
+                        height: 100%;
+                        width: 100%;
+                        .el-col{
+                            padding-top: 20px;
+                            font-size: 24px;
+                            height: 100%;
+                            &:nth-child(1){
+                                border-right: 1px solid $fontContent;
+                            }
+                            p {
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    &.small-size {
+                        height: 20%;
+                        .row-top-border{
+                            .el-col{
+                                padding-top: 0px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

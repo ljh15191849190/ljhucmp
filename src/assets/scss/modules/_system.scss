@@ -1,0 +1,31 @@
+/*
+ * @description 系统管理 模块 样式
+ */
+.system {
+    .normal-width {
+        max-width: 640px;
+    }
+
+    .el-select {
+        width: 120px;
+    }
+
+    .tenancy-info {
+        position: absolute;
+        left: 150px;
+        font-size: 12px;
+        right: unset;
+    }
+
+    .input-with-select .el-form-item {
+        margin: -10px 0;
+
+        & .el-form-item__content {
+            font-size: 13px;
+        }
+
+        & .el-form-item__error {
+            left: -20px;
+        }
+    }
+}

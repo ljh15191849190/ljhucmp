@@ -1,0 +1,77 @@
+.default-button {
+    height: 32px;
+}
+
+.el-button {
+    &.el-button--primary {
+        &:hover {
+            background: darken($themeColor, 8%);
+            color: $fontWhite;
+        }
+    }
+    &.no-padding {
+        i {
+            font-size: 25px;
+        }
+        &.size-small {
+            i {
+                font-size: 20px;
+            }
+        }
+    }
+    &.el-button--small {
+        margin-top: 2px;//修改按钮位置5——2  
+        font-size: 12px;
+        padding: 8px 20px;
+        border-radius: 4px;//修改圆角参数0——4  2/25
+    }
+    &.el-button--info{
+        &.is-plain{
+            background: $buttonGray;
+            border-color: $buttonGray;
+            color: $fontContent;
+            &:hover{
+                background: darken($buttonGray, 5%);
+            }
+        }
+    }
+}
+
+.top-transparent-btn {
+    background: transparent !important;
+    color: $themeColor !important;
+    border: none;
+}
+.icon-btn-hover {
+    &:hover {
+        color: $themeColor !important;
+    }
+}
+.dynameic-script-section {
+    .add-div {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border: 1px dashed #ddd;
+        height: 30px;
+        background: #f3f3f3;
+        cursor: pointer;
+        &:hover {
+            background: #fff;
+            color: $themeColor;
+            border-color: $themeColor;
+        }
+    }
+    .opera-icon {
+        font-size: 16px;
+        i {
+            cursor: pointer;
+            &:hover {
+                color: $themeColor;
+            }
+            &:nth-child(1) {
+                margin-right: 10px;
+            }
+        }
+    }
+}

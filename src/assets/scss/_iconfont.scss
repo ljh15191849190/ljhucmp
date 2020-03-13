@@ -1,0 +1,1241 @@
+/*
+* @description iconfont 明细设置
+* @author xinghua.wen
+**/
+.iconfont-ucmp {
+  font-family: 'iconfont-ucmp' !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+%iconfont {
+  font-family: 'iconfont-ucmp' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ucmp-icon-right:before {
+  @extend %iconfont;
+  content: '\e602';
+}
+
+.ucmp-icon-down:before {
+  @extend %iconfont;
+  content: '\e687';
+}
+
+.ucmp-icon-up:before {
+  @extend %iconfont;
+  content: '\e638';
+}
+
+.ucmp-icon-turn-small-left:before {
+  @extend %iconfont;
+  content: '\e6c0';
+}
+.ucmp-icon-turn-small-right:before {
+  @extend %iconfont;
+  content: '\e602';
+}
+// 页面--创建如期icon
+.ucmp-icon-date-creat:before {
+  @extend %iconfont;
+  content: '\e612';
+}
+//消息icon-展开与关闭的信封icon
+.ucmp-icon-letter-on:before {
+  @extend %iconfont;
+  content: '\e612';
+}
+.ucmp-icon-letter-off:before {
+  @extend %iconfont;
+  content: '\e612';
+}
+
+//页面tooltip问号icon
+.ucmp-icon-question:before {
+  @extend %iconfont;
+  content: '\e6ad';
+}
+// 感叹号
+.ucmp-icon-alert:before {
+  @extend %iconfont;
+  content: '\e6a8';
+}
+// 首页-更多按钮
+.ucmp-icon-more-btn:before {
+  @extend %iconfont;
+  content: '\e683';
+}
+// 右向小箭头
+.icmp-icon-right-small:before {
+  @extend %iconfont;
+  content: '\e602';
+}
+// plus icon
+.ucmp-icon-plus:before {
+  @extend %iconfont;
+  content: '\e674';
+}
+/**************************1级menu图标  START*****************************/
+// 展开收缩按钮
+.ucmp-icon-menu-collapse-btn:before {
+  @extend %iconfont;
+  content: '\e680';
+}
+// 总览
+.ucmp-icon-menu-dashboard:before {
+  @extend %iconfont;
+  content: '\e6a5';
+}
+// 服务目录
+.ucmp-icon-menu-server_catalog:before {
+  @extend %iconfont;
+  content: '\e665';
+}
+// 控制台
+.ucmp-icon-menu-console:before {
+  @extend %iconfont;
+  content: '\e676';
+}
+// 统计分析
+.ucmp-icon-menu-statistic_analysis:before {
+  @extend %iconfont;
+  content: '\e677';
+}
+// 云基础架构
+.ucmp-icon-menu-iaas:before {
+  @extend %iconfont;
+  content: '\e675';
+}
+//工单管理
+.ucmp-icon-menu-work_orders:before {
+  @extend %iconfont;
+  content: '\e67a';
+}
+// 应用编排
+.ucmp-icon-menu-orchestrate_app:before {
+  @extend %iconfont;
+  content: '\e678';
+}
+// 运营管理
+.ucmp-icon-menu-ucmp_operations:before {
+  @extend %iconfont;
+  content: '\e679';
+}
+// 监控告警
+.ucmp-icon-menu-ucmp_alarms:before {
+  @extend %iconfont;
+  content: '\e689';
+}
+// 个人中心
+.ucmp-icon-menu-personal:before {
+  @extend %iconfont;
+  content: '\e673';
+}
+// 系统管理
+.ucmp-icon-menu-ucmp_sys_config:before {
+  @extend %iconfont;
+  content: '\e67b';
+}
+/***************************END***************************/
+//概览
+.ucmp-icon-dashboard:before {
+  @extend %iconfont;
+  content: '\e681';
+}
+//云主机
+.ucmp-icon-ecs:before {
+  @extend %iconfont;
+  content: '\e62b';
+}
+//云硬盘
+.ucmp-icon-volume:before {
+  @extend %iconfont;
+  content: '\e629';
+}
+//标签
+.ucmp-icon-tag:before {
+  @extend %iconfont;
+  content: '\e682';
+}
+// NAS
+.ucmp-icon-nas:before {
+  @extend %iconfont;
+  content: '\e6c8';
+}
+// f5
+.ucmp-icon-f5:before {
+  @extend %iconfont;
+  content: '\e6a6';
+}
+// f5_pool
+.ucmp-icon-pool:before {
+  @extend %iconfont;
+  content: '\e6bf';
+}
+// 脚本
+.ucmp-icon-script:before {
+  @extend %iconfont;
+  content: '\e6be';
+}
+//物理机
+.ucmp-icon-physical-machine:before {
+  @extend %iconfont;
+  content: '\e622';
+}
+//编排部署
+.ucmp-icon-blueprint-service:before {
+  @extend %iconfont;
+  content: '\e610';
+}
+//对象存储
+.ucmp-icon-object-storage:before {
+  @extend %iconfont;
+  content: '\e606';
+}
+//快照
+.ucmp-icon-snapshot:before {
+  @extend %iconfont;
+  content: '\e614';
+}
+//VPC
+.ucmp-icon-vpc:before {
+  @extend %iconfont;
+  content: '\e6a6';
+}
+//虚拟桌面
+.ucmp-icon-virtual-desktop:before {
+  @extend %iconfont;
+  content: '\e626';
+}
+//虚拟应用
+.ucmp-icon-virtual-app:before {
+  @extend %iconfont;
+  content: '\e624';
+}
+//IaaS监控
+.ucmp-icon-IaaS-monitor:before {
+  @extend %iconfont;
+  content: '\e633';
+}
+//容量概览
+.ucmp-icon-capacity-mgmt:before {
+  @extend %iconfont;
+  content: '\e61b';
+}
+//容量分析
+.ucmp-icon-capacity-analysis:before {
+  @extend %iconfont;
+  content: '\e61c';
+}
+//审批统计
+.ucmp-icon-approval-statistics:before {
+  @extend %iconfont;
+  content: '\e61f';
+}
+//监控详情
+.ucmp-icon-monitor-details:before {
+  @extend %iconfont;
+  content: '\e60d';
+}
+//资源使用统计
+.ucmp-icon-resource-employ:before {
+  @extend %iconfont;
+  content: '\e62d';
+}
+//成本分析
+.ucmp-icon-cost-analysis:before {
+  @extend %iconfont;
+  content: '\e63a';
+}
+//弹性负载均衡
+.ucmp-icon-elastic-load-balance:before {
+  @extend %iconfont;
+  content: '\e638';
+}
+//弹性伸缩
+.ucmp-icon-elastic-stretch:before {
+  @extend %iconfont;
+  content: '\e63d';
+}
+//桌面(应用)使用统计
+.ucmp-icon-app-desktop-statistics:before {
+  @extend %iconfont;
+  content: '\e62c';
+}
+//告警统计
+.ucmp-icon-alarm-indexs:before {
+  @extend %iconfont;
+  content: '\e608';
+}
+//系统配置
+.ucmp-icon-operation-configuration:before {
+  @extend %iconfont;
+  content: '\e625';
+}
+//全局参数
+.ucmp-icon-global-param:before {
+  @extend %iconfont;
+  content: '\e617';
+}
+//操作日志
+.ucmp-icon-operlog:before {
+  @extend %iconfont;
+  content: '\e636';
+}
+//平台监控
+.ucmp-icon-gateway:before {
+  @extend %iconfont;
+  content: '\e649';
+}
+//资源监控
+.ucmp-icon-metrics:before {
+  @extend %iconfont;
+  content: '\e63e';
+}
+
+//通知公告
+.ucmp-icon-announcement:before {
+  @extend %iconfont;
+  content: '\e620';
+}
+
+//任务计划
+.ucmp-icon-quartz-task:before {
+  @extend %iconfont;
+  content: '\e61a';
+}
+//任务日志
+.ucmp-icon-script-execution:before {
+  @extend %iconfont;
+  content: '\e618';
+}
+//申请单管理
+.ucmp-icon-orders:before {
+  @extend %iconfont;
+  content: '\e639';
+}
+//审批管理
+.ucmp-icon-approve:before {
+  @extend %iconfont;
+  content: '\e61d';
+}
+//任务管理
+.ucmp-icon-tasks:before {
+  @extend %iconfont;
+  content: '\e61e';
+}
+//告警管理
+.ucmp-icon-alarm-index:before {
+  @extend %iconfont;
+  content: '\e60a';
+}
+//告警策略管理
+.ucmp-icon-alarm:before {
+  @extend %iconfont;
+  content: '\e607';
+}
+//工单管理
+.ucmp-icon-tickets:before {
+  @extend %iconfont;
+  content: '\e60b';
+}
+//消息通知
+.ucmp-icon-message:before {
+  @extend %iconfont;
+  content: '\e621';
+}
+//租户管理
+.ucmp-icon-tenant:before {
+  @extend %iconfont;
+  content: '\e632';
+}
+//组织机构管理
+.ucmp-icon-org-node:before {
+  @extend %iconfont;
+  content: '\e631';
+}
+//用户管理
+.ucmp-icon-user-management:before {
+  @extend %iconfont;
+  content: '\e627';
+}
+//角色管理
+.ucmp-icon-role:before {
+  @extend %iconfont;
+  content: '\e60e';
+}
+//应用系统管理
+.ucmp-icon-application:before {
+  @extend %iconfont;
+  content: '\e628';
+}
+//服务发布
+.ucmp-icon-service-define:before {
+  @extend %iconfont;
+  content: '\e60c';
+}
+//服务套餐列表
+.ucmp-icon-service-package:before {
+  @extend %iconfont;
+  content: '\e6bf';
+}
+//套餐规格
+.ucmp-icon-package-item:before {
+  @extend %iconfont;
+  content: '\e64b';
+}
+//账户管理
+.ucmp-icon-billing-account:before {
+  @extend %iconfont;
+  content: '\e62f';
+}
+
+//编排定义
+.ucmp-icon-blueprint-define:before {
+  @extend %iconfont;
+  content: '\e611';
+}
+//编排发布
+.ucmp-icon-blueprint-service-define:before {
+  @extend %iconfont;
+  content: '\e60f';
+}
+//软件产品
+.ucmp-icon-software-define:before {
+  @extend %iconfont;
+  content: '\e619';
+}
+//脚本库
+.ucmp-icon-script:before {
+  @extend %iconfont;
+  content: '\e613';
+}
+//云厂商
+.ucmp-icon-cloud-provider:before {
+  @extend %iconfont;
+  content: '\e62a';
+}
+//资源池
+.ucmp-icon-resource-pool:before {
+  @extend %iconfont;
+  content: '\e630';
+}
+//存量资源
+.ucmp-icon-stock-instance-mgmt:before {
+  @extend %iconfont;
+  content: '\e637';
+}
+//物理机
+.ucmp-icon-physical-machine-cloud:before {
+  @extend %iconfont;
+  content: '\e622';
+}
+//虚拟桌面(应用)管理
+.ucmp-icon-virtual-app:before {
+  @extend %iconfont;
+  content: '\e62e';
+}
+//历史会话
+.ucmp-icon-history:before {
+  @extend %iconfont;
+  content: '\e63c';
+}
+//云主机模板管理
+.ucmp-icon-template-define:before {
+  @extend %iconfont;
+  content: '\e616';
+}
+//网段管理
+.ucmp-icon-subnet:before {
+  @extend %iconfont;
+  content: '\e615';
+}
+// IP组管理
+.ucmp-icon-ip-pool:before {
+  @extend %iconfont;
+  content: '\e634';
+}
+// IP管理
+.ucmp-icon-ip-all:before {
+  @extend %iconfont;
+  content: '\e635';
+}
+//字典管理
+.ucmp-icon-dict:before {
+  @extend %iconfont;
+  content: '\e640';
+}
+//服务分类
+.ucmp-icon-service-type:before {
+  @extend %iconfont;
+  content: '\e63f';
+}
+//服务状态
+.ucmp-icon-service-status:before {
+  @extend %iconfont;
+  content: '\e70f';
+}
+//日志
+.ucmp-icon-logs:before {
+  @extend %iconfont;
+  content: '\e6a0';
+}
+//API
+.ucmp-icon-docs:before {
+  @extend %iconfont;
+  content: '\e63b';
+}
+//返回按钮
+.ucmp-icon-back:before {
+  @extend %iconfont;
+  content: '\e641';
+}
+//大屏切换
+.ucmp-icon-screen-switch:before {
+  @extend %iconfont;
+  content: '\e6c3';
+}
+
+//告警处理页面tag标签icon
+.ucmp-icon-edit:before {
+  @extend %iconfont;
+  //content: '编辑';
+  content: '\e688';
+}
+// 关闭
+.ucmp-icon-close:before {
+  @extend %iconfont;
+  content: '\e849';
+}
+
+// 密钥
+.ucmp-icon-kepair:before {
+  @extend %iconfont;
+  content: '\e84c';
+}
+
+// 防火墙
+.ucmp-icon-firewall:before {
+  @extend %iconfont;
+  content: '\e669';
+}
+
+// 网络简化配置
+.ucmp-icon-account-mgmt:before {
+  @extend %iconfont;
+  content: '\e70c';
+}
+
+// 自定义设备管理
+.ucmp-icon-custom-device:before {
+  @extend %iconfont;
+  content: '\e658';
+}
+
+// 容量优化建议
+.ucmp-icon-capacity-suggestion:before {
+  @extend %iconfont;
+  content: '\e661';
+}
+// 购物车(无货)
+.ucmp-icon-cart:before {
+  @extend %iconfont;
+  content: '\e6b7';
+}
+// 购物车(有货)
+.ucmp-icon-cart-load:before {
+  @extend %iconfont;
+  content: '\e6d6';
+  color: #ffaa00;
+}
+.ucmp-icon-pause:before {
+  @extend %iconfont;
+  content: '\e646';
+}
+
+.ucmp-icon-more:before {
+  @extend %iconfont;
+  content: '\e659';
+}
+
+.ucmp-icon-menu:before {
+  @extend %iconfont;
+  content: '\e667';
+}
+
+.ucmp-icon-work-order:before {
+  @extend %iconfont;
+  content: '\e664';
+}
+
+.ucmp-icon-delete:before {
+  @extend %iconfont;
+  //content: '删除';
+  content: '\e68c';
+}
+
+.ucmp-icon-view:before {
+  @extend %iconfont;
+  content: '\e666';
+}
+
+.ucmp-icon-setting:before {
+  @extend %iconfont;
+  content: '\e66a';
+}
+
+.ucmp-icon-bind:before {
+  @extend %iconfont;
+  content: '\e668';
+}
+
+.ucmp-icon-email:before {
+  @extend %iconfont;
+  content: '\e651';
+}
+
+/********** 服务目录图标(service-catalog) ************/
+
+// 代办事项
+.ucmp-icon-serlog-todo:before {
+  @extend %iconfont;
+  content: '\e67e';
+}
+// 本月消费
+.ucmp-icon-serlog-billing-account:before {
+  @extend %iconfont;
+  content: '\e67c';
+}
+// 应用系统
+.ucmp-icon-serlog-application:before {
+  @extend %iconfont;
+  content: '\e67f';
+}
+// 处理中申请单
+.ucmp-icon-serlog-orders:before {
+  @extend %iconfont;
+  content: '\e67d';
+}
+
+.ucmp-icon-check-error-log:before {
+  @extend %iconfont;
+  content: '\e6c1';
+}
+
+// 申请服务
+.ucmp-icon-serlog-apply-service:before {
+  @extend %iconfont;
+  content: '\e6aa';
+}
+// 配置(用于服务定义时)
+.ucmp-icon-serlog-config:before {
+  @extend %iconfont;
+  content: '\e69e';
+}
+/********** 服务目录图标(service-catalog) END************/
+
+/******************首页服务申请图标************************/
+// 云主机服务
+.ucmp-icon-service-ecs:before {
+  @extend %iconfont;
+  content: '\e663';
+}
+// 云硬盘服务
+.ucmp-icon-service-volume:before {
+  @extend %iconfont;
+  content: '\e662';
+}
+// 宿主机服务
+.ucmp-icon-service-physical_machine:before {
+  @extend %iconfont;
+  content: '\e65d';
+}
+// 弹性伸缩服务
+.ucmp-icon-service-elastic_stretch:before {
+  @extend %iconfont;
+  content: '\e65a';
+}
+// 对象存储服务
+.ucmp-icon-service-obj_stroage:before {
+  @extend %iconfont;
+  content: '\e65b';
+}
+// 虚拟桌面服务
+.ucmp-icon-service-virtual_desktop:before {
+  @extend %iconfont;
+  content: '\e660';
+}
+// 虚拟应用服务
+.ucmp-icon-service-virtual_app:before {
+  @extend %iconfont;
+  content: '\e65f';
+}
+/****************END*********************/
+// 云厂商同步
+.ucmp-icon-synchro:before {
+  @extend %iconfont;
+  content: '\e672';
+}
+
+// 云厂商同步结果
+.ucmp-icon-cloud-provider-result:before {
+  @extend %iconfont;
+  content: '\e671';
+}
+
+// 放大按钮
+.ucmp-icon-expend:before {
+  @extend %iconfont;
+  content: '\e68a';
+}
+// 用户信息logo
+.ucmp-icon-user-logo:before{
+  @extend %iconfont;
+  content: '\e686';
+}
+// 组织机构logo
+.ucmp-icon-organization-logo:before{
+  @extend %iconfont;
+  content: '\e6b6';
+}
+// 总览页面应用logo
+.ucmp-icon-dashboard-app:before{
+  @extend %iconfont;
+  content: '\e684';
+}
+
+// 连线标志
+.ucmp-icon-link:before{
+  @extend %iconfont;
+  content: '\e690';
+}
+
+// 模型部署操作--流程定义
+.ucmp-icon-model-deploy:before{
+  @extend %iconfont;
+  content: '\e68b';
+}
+
+/********************* 应用编排/控制台/服务目录 资源列表 start ***********************/
+[class^="resource-icon-"], [class*="resource-icon-"] {
+  &:before {
+    @extend %iconfont;
+    content: '\e685';
+  }
+}
+
+.resource-icon-ecs:before {
+  @extend %iconfont;
+  content: '\e663';
+}
+
+.resource-icon-volume:before {
+  @extend %iconfont;
+  content: '\e662';
+}
+
+.resource-icon-subnet:before {
+  @extend %iconfont;
+  content: '\e6a4';
+}
+
+.resource-icon-oracle:before {
+  @extend %iconfont;
+  content: '\e693';
+}
+
+.resource-icon-mysql:before {
+  @extend %iconfont;
+  content: '\e692';
+}
+
+.resource-icon-tomcat:before {
+  @extend %iconfont;
+  content: '\e694';
+}
+
+.resource-icon-webLogic:before {
+  @extend %iconfont;
+  content: '\e695';
+}
+// 标签
+.resource-icon-tag:before {
+  @extend %iconfont;
+  content: '\e682';
+}
+// NAS
+.resource-icon-nas:before {
+  @extend %iconfont;
+  content: '\e6c8';
+}
+// F5
+.resource-icon-f5:before {
+  @extend %iconfont;
+  content: '\e6a6';
+}
+// F5-pool
+.resource-icon-pool:before {
+  @extend %iconfont;
+  content: '\e6bf';
+}
+// script
+.resource-icon-script:before {
+  @extend %iconfont;
+  content: '\e6be';
+}
+// 青云关系型数据库
+.resource-icon-qingcloud_rdb:before {
+  @extend %iconfont;
+  content: '\e6d4';
+}
+// 青云负载缓存
+.resource-icon-qingcloud_cache:before {
+  @extend %iconfont;
+  content: '\e6d3';
+}
+// 青云负载均衡器
+.resource-icon-qingcloud_lb:before {
+  @extend %iconfont;
+  content: '\e6bf';
+}
+.clone-resource:before {
+  @extend %iconfont;
+  content: '\e6ca';
+}
+
+.add-to-group:before {
+  @extend %iconfont;
+  content: '\e6cb';
+}
+
+// 保存
+.ucmp-icon-save:before {
+  @extend %iconfont;
+  content: '\e6cc';
+}
+
+// 画布居中
+.center-canvas::before {
+  @extend %iconfont;
+  content: '\e6cd';
+}
+
+.ucmp-icon-filter-down::before {
+    @extend %iconfont;
+    content: '\e6d0';
+}
+
+.resource-icon-oracle_rac:before {
+    @extend %iconfont;
+    content: '\e6f4';
+}
+
+/********************* 应用编排/控制台/服务目录 资源列表 end ***********************/
+
+/********************* 云基础架构/计费 start ***********************/
+// 上传
+.ucmp-icon-upload:before{
+  @extend %iconfont;
+  content: '\e68e';
+}
+
+// 下载
+.ucmp-icon-download:before{
+  @extend %iconfont;
+  content: '\e68f';
+}
+
+
+// 资源池分配资源
+.ucmp-icon-alloc:before{
+  @extend %iconfont;
+  content: '\e69e';
+}
+
+// 云厂商黑名单
+.ucmp-icon-blacklist:before{
+  @extend %iconfont;
+  content: '\e6c6';
+}
+
+// 计费设置
+.ucmp-icon-cost-set:before{
+  @extend %iconfont;
+  content: '\e69c';
+}
+
+//镜像管理配置
+.ucmp-icon-template-set:before {
+  @extend %iconfont;
+  content: '\e69e';
+}
+
+//设备管理添加规格
+.ucmp-icon-device-plus:before {
+  @extend %iconfont;
+  content: '\e6a3';
+}
+
+//设备管理去除规格
+.ucmp-icon-device-remove:before {
+  @extend %iconfont;
+  content: '\e6a2';
+}
+// 设备管理组织机构
+.ucmp-icon-device-org:before{
+  @extend %iconfont;
+  content: '\e696';
+}
+
+// 部门账单(上月余额)
+.ucmp-icon-bill-last-balance:before{
+  @extend %iconfont;
+  content: '\e6ac';
+}
+// 部门账单(本月支出)
+.ucmp-icon-bill-expend:before{
+  @extend %iconfont;
+  content: '\e6ab';
+}
+// 部门账单(本月余额)
+.ucmp-icon-bill-this-balance:before{
+  @extend %iconfont;
+  content: '\e66d';
+}
+
+.ucmp-icon-invalid:before {
+  @extend %iconfont;
+  content: '\e62d';
+}
+/********************* 云基础架构/计费 end ***********************/
+/********************* 云基础架构/桌面云计算机 start *********************/
+// 注销
+.ucmp-icon-loginout:before {
+  @extend %iconfont;
+  content: '\e617';
+}
+// 重启
+.ucmp-icon-reboot:before {
+  @extend %iconfont;
+  content: '\e61a';
+}
+// 强制重启
+.ucmp-icon-force-reboot:before {
+  @extend %iconfont;
+  content: '\e61c';
+}
+
+// 关闭
+.ucmp-icon-close:before {
+  @extend %iconfont;
+  content: '\e618';
+}
+// 强制关闭
+.ucmp-icon-force-close:before {
+  @extend %iconfont;
+  content: '\e61b';
+}
+// 查看会话
+.ucmp-icon-see-session:before {
+  @extend %iconfont;
+  content: '\e619';
+}
+// 断开连接
+.ucmp-icon-disconnect:before {
+  @extend %iconfont;
+  content: '\e623';
+}
+/********************* 云基础架构/桌面云计算机 end ***********************/
+/********************* 云基础架构/云应用管理 start *********************/
+// 标记常用
+.ucmp-icon-sign-used:before {
+  @extend %iconfont;
+  content: '\e61d';
+}
+// 取消标记常用
+.ucmp-icon-cancel-sign-used:before {
+  @extend %iconfont;
+  content: '\e61f';
+}
+/********************* 云基础架构/云应用管理 end ***********************/
+/********************* 工单 start ***********************/
+.ucmp-icon-user-avatar:before {
+    @extend %iconfont;
+    content: '\e66f';
+}
+.ucmp-icon-complete {
+  &:before {
+      @extend %iconfont;
+      content: '\e656';
+  }
+
+  &__after {
+    &:after {
+        @extend %iconfont;
+        content: '\e656';
+    }
+  }
+}
+/********************* 工单 end ***********************/
+
+/******************配额管理 配额对象树图标 start************************/
+.ucmp-icon-quota-close-file:before {
+  @extend %iconfont;
+  content: '\e69b';
+}
+.ucmp-icon-quota-open-file:before {
+  @extend %iconfont;
+  content: '\e69a';
+}
+.ucmp-icon-quota-text:before {
+  @extend %iconfont;
+  content: '\e699';
+}
+/******************配额管理 配额对象树图标 end********************/
+// 业务树结构
+.ucmp-icon-tree-app:before{
+  @extend %iconfont;
+  content: '\e643';
+}
+
+// 业务树结构
+.ucmp-icon-tree-org:before{
+  @extend %iconfont;
+  content: '\e652';
+}
+.ucmp-icon-tree-org-2:before{
+  @extend %iconfont;
+  content: '\e69f';
+}
+
+/******************console 各服务操作图标 start************************/
+.ucmp-icon-console-start:before{
+    @extend %iconfont;
+    content: '\e6ae';
+}
+.ucmp-icon-console-reboot:before{
+    @extend %iconfont;
+    content: '\e6b0';
+}
+.ucmp-icon-console-stop:before{
+    @extend %iconfont;
+    content: '\e6af';
+}
+.ucmp-icon-console-recycle-bin:before {
+    @extend %iconfont;
+    content: '\e6b3'
+}
+// The volume detach icon
+.ucmp-icon-console-detach:before {
+    @extend %iconfont;
+    content: '\e6b5'
+}
+// The volume attach icon
+.ucmp-icon-console-attach:before {
+    @extend %iconfont;
+    content: '\e6b4'
+}
+.ucmp-icon-console-remote-console:before {
+  @extend %iconfont;
+  content: '\e6b1'
+
+}
+.ucmp-icon-console-clone:before {
+  @extend %iconfont;
+  content: '\e6c7'
+}
+.ucmp-icon-console-minus:before {
+  @extend %iconfont;
+  content: '\e6c9'
+}
+.ucmp-icon-console-viewIp:before {
+  @extend %iconfont;
+  content: '\e6c9'
+}
+.ucmp-icon-console-bindIp:before {
+  @extend %iconfont;
+  content: '\e60e'
+}
+.ucmp-icon-console-unbindIp:before {
+  @extend %iconfont;
+  content: '\e60d'
+}
+.ucmp-icon-console-release:before {
+  @extend %iconfont;
+  content: '\e60f'
+}
+
+.ucmp-icon-disabled:before {
+  @extend %iconfont;
+  content: '\e6ce'
+}
+//纳管
+.ucmp-icon-donatube:before {
+    @extend %iconfont;
+    content: '\e61e'
+  }
+  //取消纳管
+.ucmp-icon-cancelnatube:before {
+    @extend %iconfont;
+    content: '\e621'
+  }
+/******************console 各服务操作图标 end************************/
+
+/****************** 评价 start ************************/
+.ucmp-icon-star-empty:before {
+    @extend %iconfont;
+    content: '\e6bd';
+}
+
+.ucmp-icon-star-selected:before {
+    @extend %iconfont;
+    content: '\e6bc';
+}
+/****************** 评价 end ************************/
+
+/***********************告警icon图标************************/
+.ucmp-icon-alarm-total:before {
+  @extend %iconfont;
+  content: '\e68d'
+}
+.ucmp-icon-alarm-danger:before {
+  @extend %iconfont;
+  content: '\e6b8'
+}
+.ucmp-icon-alarm-warning:before {
+  @extend %iconfont;
+  content: '\e6ba'
+}
+.ucmp-icon-alarm-info:before {
+  @extend %iconfont;
+  content: '\e6bb'
+}
+/***********************告警icon图标end************************/
+
+/******************Approve management icon start************************/
+// Disagree icon
+.ucmp-icon-approve-disagree:before {
+  @extend %iconfont;
+  content: '\e6c5'
+}
+// Agree icon
+.ucmp-icon-approve-agree:before {
+  @extend %iconfont;
+  content: '\e6c4'
+}
+// Handle icon
+.ucmp-icon-approve-handle:before {
+  @extend %iconfont;
+  content: '\e682'
+}
+/******************Approve management icon end************************/
+
+/******************process define icon start************************/
+// Convert icon
+.ucmp-icon-process-convert:before {
+  @extend %iconfont;
+  content: '\e6a1'
+}
+/******************process define icon end************************/
+
+.ucmp-icon-authority:before {
+    @extend %iconfont;
+    content: '\e6a0';
+}
+
+/****************** 操作系统 图标 start ************************/
+.ucmp-icon-os-windows:before {
+    @extend %iconfont;
+    content: '\e7c4'
+}
+
+.ucmp-icon-os-centos:before {
+    @extend %iconfont;
+    content: '\e608'
+}
+
+.ucmp-icon-os-debian:before {
+    @extend %iconfont;
+    content: '\e6d2'
+}
+
+.ucmp-icon-os-redhat:before {
+    @extend %iconfont;
+    content: '\e6d1'
+}
+
+.ucmp-icon-os-suse:before {
+    @extend %iconfont;
+    content: '\e64f'
+}
+
+.ucmp-icon-os-ubuntu:before {
+    @extend %iconfont;
+    content: '\e603'
+}
+.ucmp-icon-align-top:before {
+  @extend %iconfont;
+  content: '\e605'
+}
+.ucmp-icon-align-bottom:before {
+  @extend %iconfont;
+  content: '\e606'
+}
+.ucmp-icon-align-left:before {
+  @extend %iconfont;
+  content: '\e601'
+}
+.ucmp-icon-align-right:before {
+  @extend %iconfont;
+  content: '\e604'
+}
+/****************** 操作系统 图标 end ************************/
+
+/****************** 租期 start ********************/
+.ucmp-icon-tenancy-soon:before {
+    @extend %iconfont;
+    content: '\e6d7';
+    color: $fontOrange
+}
+
+.ucmp-icon-tenancy-expired:before {
+    @extend %iconfont;
+    content: '\e6d7';
+    color: $fontRed
+}
+/****************** 租期 end ********************/
+
+/****************** 配置模板 start ********************/
+.ucmp-icon-cfg-template:before {
+  @extend %iconfont;
+  content: '\e6d5';
+}
+/****************** 配置模板 end ********************/
+
+// 密码-查看
+.ucmp-icon-password-view:before {
+  @extend %iconfont;
+  content: '\e626';
+  color: $fontRed
+}
+// 密码-隐藏
+.ucmp-icon-password-hidden:before {
+  @extend %iconfont;
+  content: '\e6d8';
+  color: $fontRed
+}
+// 分配
+.ucmp-icon-assign:before {
+  @extend %iconfont;
+  content: '\e6e9';
+  font-size: 22px;
+}
+.ucmp-icon-huifu:before {
+  @extend %iconfont;
+  content: "\e62a";
+}

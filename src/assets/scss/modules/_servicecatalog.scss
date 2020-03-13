@@ -1,0 +1,138 @@
+// 申请服务实例 标签样式特殊处理
+.service-dynamic-form, .sys-form {
+    .el-form-item__label {
+        white-space: nowrap;
+    }
+    .el-form-item.tag .el-form-item__content {
+        margin-left: 0 !important;
+    }
+    .el-checkbox-group {
+        display: inline-block;
+    }
+}
+
+//主页-服务目录, 服务定义
+.home-catalog-container, .service-define-contanier {
+    .flex-wrap {
+        align-content: flex-start;
+    }
+
+    .calc-height {
+        height: calc(100% - 50px);
+        overflow-y: auto;
+        padding-bottom: 30px;
+    }
+
+    .catalog-list {
+        font-size: 14px;
+        line-height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+
+        & > span {
+            margin-right: 40px;
+            cursor: pointer;
+        }
+
+        & > span.active {
+            color: $themeColor;;
+        }
+    }
+
+    .content-item {
+        width: 300px;
+        height: 280px;
+        padding: 9px 12px;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        position: relative;
+        overflow: hidden;
+        background-color: unset;
+
+        &:hover {
+            background: $catalogBgColor;
+            .box-content {
+                bottom: 80px;
+                font-size: 14px;
+            }
+        }
+
+        .catalog-name {
+            font-size: 16px;
+            font-weight: 500;
+            min-height: 24px;
+        }
+
+        .catalog-desc {
+            font-size: 12px;
+            text-align: left;
+            color: $fontTitleLight;
+            // 100% - icon - title
+            height: calc(100% - 76px - 24px);
+            width: 100%;
+            margin-bottom: 0;
+            display: flex;
+            flex-direction: column;
+            p {
+                margin-bottom: 0;
+            }
+        }
+        &.roof {
+            background-color: #ecf6ff;
+        }
+    }
+
+    .adjust-oper-icon {
+        font-size: 20px;
+        line-height: 1;
+        top: 10px;
+        right: 10px;
+    }
+
+    .adjust-icon {
+        font-size: 75px;
+        line-height: 1;
+        margin: 16px 0;
+    }
+
+    .box-content {
+        width: 100%;
+        height: 45px;
+        position: absolute;
+        left: 0;
+        bottom: -100%;
+        z-index: 1;
+        transition: all 0.5s ease 0s;
+        text-align: center;
+        .box-content-btn {
+            width: 120px;
+            font-size: 16px;
+            border-radius: unset;
+        }
+    }
+
+    .apply-margin {
+        margin-left: 5px;
+    }
+
+    .input-search-width {
+        width: 300px;
+        flex-shrink: 0;
+        height: 40px;
+    }
+
+    .label-size {
+        font-size: 14px;
+        padding-bottom: 5px;
+    }
+}
+
+// 创建监听器 combinitem组件样式特殊处理
+.instance-dialog {
+    .combinitem-body {
+        width: 100% !important;
+    }
+    .form-body-item  {
+        display: none;
+    }
+}

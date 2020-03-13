@@ -1,0 +1,638 @@
+/**
+* @descriptoin 组件个性化样式
+* @author xinghua.wen
+*/
+#app {
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $fontContent;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background:$globalBgColor;
+    position: relative;
+}
+
+.list-content {
+    margin-top: 25px;
+}
+
+.container-flud {
+    height: 100%;
+}
+
+.breadcrumb-container {
+    position: relative;
+    padding-bottom: 18px;
+    padding-top: 18px;
+    padding-left: 30px;
+    .operation-btn-pos{
+        position: absolute;
+        right: 18px;
+        top: 4px;
+    }
+}
+
+.ucmp-content {
+    height: calc(100% - 94px);
+    padding: 0 16px;
+    background: $fontWhite;
+    margin-left: 16px;
+    margin-right: 16px;
+    overflow: hidden;
+    overflow-y: auto;
+    & > div {
+        margin-top: 10px !important;
+        height: calc(100% - 10px) !important;
+    }
+    .work-content {
+        height: 100%;
+        .tab-content {
+            height: calc(100% - 85px);
+        }
+    }
+}
+
+/************ 新建编排 ****************/
+.orchestrate.container-flud {
+    .ucmp-content {
+        padding: 0;
+    }
+}
+
+.cell-pane {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.pagefooter {
+    height: 54px;
+}
+
+// 只读模式 字体颜色
+.read-only {
+    font-size: 14px;
+    &.title {
+        color: $fontTitleLight;
+    }
+    &.value {
+        margin-left: 10px;
+        color: $fontContent;
+    }
+}
+
+.bg-white {
+    background: $fontWhite;
+}
+
+.bg-transparent {
+    background: transparent !important;
+}
+
+.bg-gray {
+    background: $cardPanelBgColor;
+}
+.bg-primary{
+    background: $running;
+}
+
+.bg-danger, .bg-alarm-3{
+    background: $danger;
+}
+
+.bg-warning, .bg-alarm-2{
+    background: $fontOrange;
+}
+
+.bg-info, .bg-alarm-1 {
+    background: $chartCardBlue;
+}
+
+.bg-purple, .bg-alarm-total{
+    background: $purple;
+}
+
+.bg-theme{
+  background: $themeColor;
+}
+
+.bg-catalog{
+    background: $applybgColor
+}
+.border {
+    border: 1px solid $borderColor;
+}
+
+.border-top {
+    border-top: 1px solid $borderColor;
+}
+
+.border-light-top {
+    border-top: 1px solid $borderLightColor;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $borderColor;
+}
+
+.border-light-bottom {
+    border-bottom: 1px solid $borderLightColor;
+}
+
+.border-left {
+    border-left: 1px solid $borderColor;
+}
+
+.border-right {
+    border-right: 1px solid $borderColor;
+}
+
+// .panel-table {
+//     height: calc(100% - 49px);
+// }
+
+.input-tree {
+    width: 100%;
+    position: relative !important;
+    .filter-container {
+        background-color: $fontWhite;
+        padding-right: 5px;
+        margin-top: 10px;
+        max-width: 400px;
+        height: 200px;
+        border: 1px solid $borderColor;
+        overflow: auto;
+        position: absolute;
+        z-index: 102;//修改z-index
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        .filter-tree {
+            min-width: 200px;
+        }
+        .org {
+            color: $fontLightGrey;
+            padding-right: 5px;
+        }
+    }
+}
+
+.org-tree {
+    width: 100%;
+    position: relative !important;
+    .filter-container {
+        background-color: $fontWhite;
+        padding-right: 5px;
+        margin-top: 10px;
+        width: 100%;
+        max-width: 480px;
+        height: 200px;
+        border: 1px solid $borderColor;
+        overflow: auto;
+        position: absolute;
+        z-index: 10001;
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        .filter-tree {
+            min-width: 200px;
+        }
+        .org {
+            color: $fontLightGrey;
+            padding-right: 5px;
+        }
+    }
+    .custom-tree-node {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        padding-right: 8px;
+    }
+}
+
+.column-name {
+    cursor: pointer;
+}
+
+.form-center-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0px;
+}
+
+.form-end-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 16px 0px;
+}
+
+// active状态下的按钮文字颜色
+.active {
+    color: $themeColor;
+}
+
+.input-width {
+    width: 200px;
+}
+
+// 表格操作图标样式
+.operate-icon-extra-large {
+    font-size: 20px;
+    cursor: pointer;
+    color: $themeColor;
+}
+
+/************* 表单校验失败通用样式 *****************/
+.is-danger {
+    // UCMP3-4137 租期个性化组件校验失败样式
+    &.el-radio-group {
+        span, input {
+            border-color: $danger !important;
+        }
+    }
+    &.el-input input, &.el-input textarea, &.el-select input, &.el-cascader input, &.el-textarea textarea {
+        color: $danger;
+        border-color: $danger;
+    }
+    .danger-text-container & {
+        padding-top: 2px;
+        color: $danger;
+    }
+    font-size: 12px;
+    line-height: 20px !important;
+    // padding-top: 4px;
+    //UCMP3-683【oracle-nas】nas大小校验提示，UI显示不正确
+    //问题原因：line-height设置为1，元素本身的字体大小 设置行高，这样‘-’, ‘+’显示就有问题
+    //解决方法：line-height设置为从父元素继承
+    &.el-input-number {
+        padding-top: 1px;
+        line-height: inherit
+    }
+    &.validator-error {
+        position: relative;
+        display: block;
+        margin-top: 3px;
+        left: 0;
+        // padding-top: 2px;
+        color: $danger;
+        z-index: 99;
+    }
+    .el-input__prefix {
+        span {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+// 下载等按钮在右上角显示
+.absolute-rt {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+// 取消边框
+.no-border {
+    border: none;
+}
+
+// 元素垂直方向剧中
+.align-center{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+// 背景图加载
+.bgImg-approve{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: url(../../../static/images/orderItemImg.png) -10px -75px no-repeat;
+}
+
+/************* 定义text文字的颜色参考Bootstrap4 *****************/
+.text-white {
+    color: $no-status;
+}
+.text-danger{
+    color: $danger;
+}
+.text-normal {
+    color: $fontContent;
+}
+.text-light-grey {
+    color: $fontTitleLight;
+}
+.icon-button {
+    font-size: 16px;
+    margin-right: 20px;
+    color: $fontContent;
+    cursor: pointer;
+    &.disabled {
+        color: $disabledColor;
+        background: $disabledBgColor;
+        cursor: not-allowed;
+    }
+    &:hover {
+        color: $themeColor;
+    }
+}
+
+.disabled-color {
+    color: $disabledColor;
+}
+
+.gray-bg {
+    background: $grayBgColor;
+}
+
+/************* Setting overflow style start  *****************/
+.overflow-hidden {
+  overflow: hidden;
+}
+.overflow-y-hidden {
+  overflow-y:hidden;
+}
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+.overflow-auto {
+  overflow: auto;
+}
+.overflow-y-auto {
+  overflow-y: auto;
+}
+.overflow-x-auto {
+  overflow-x: auto;
+}
+.overflow-scroll {
+  overflow: scroll;
+}
+.overflow-y-scroll {
+  overflow-y:scroll
+}
+.overflow-x-scroll {
+  overflow: scroll;
+}
+/************* Setting overflow style end  *****************/
+
+/************** text overflow style --nowarp, ***************/
+.text-overflow-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.services-cot{
+    .item-service{
+        color: $fontWhite;
+        &:hover{
+            color: $chartCardYellow;
+        }
+    }
+}
+
+.script-list {
+    background: $globalBgColor;
+    padding: 0 5px;
+    border: 1px solid $borderColor;
+    border-top: none;
+}
+
+.tip-text {
+    font-size: 12px;
+    color: $fontTitleLight;
+}
+
+// 动态表单添加loading效果
+.dynamic-form-item, .loading-form-item {
+    .leaptocloud-loading-mask {
+        top: -6px !important;
+        left: inherit !important;
+        right: 30px !important;
+        display: inline-block;
+        transform: scale(0.5) !important;
+    }
+}
+
+//table 顶部右侧按钮区域
+.table-top-btn-pane {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+}
+/********************* combinitem 组件样式 *************************/
+.combinitem-box{
+    position: relative;
+    display: flex;
+    .combinitem-title {
+        white-space: nowrap;
+        margin-right: 5px;
+    }
+    .form-body-item {
+        width: 90px;
+        .operation-div {
+            right: 0;
+            .el-button{
+                padding: 0 10px;
+                margin-left: 0;
+                margin-right: 5px;
+                margin-top: 0;
+            }
+            &.pos-btn{
+                position: absolute;
+                left: 0;
+                z-index: 10;
+            }
+        }
+    }
+}
+
+/**************** 表单中的增删按钮 *******************/
+.form-body-item {
+    display: flex;
+    position: relative;
+    .operation-div {
+        .el-button{
+            padding: 0px 15px;
+            height: 32px;
+            line-height: 32px;
+            &.remove-btn{
+                border: none;
+                background: #ddd;
+                color: #333;
+                &:hover {
+                    background: orange;
+                    color: #fff;
+                }
+            }
+        }
+        &.add-btn{
+            margin-left: 120px;
+        }
+        &.pos-btn{
+            position: absolute;
+            left: -15px;
+            // bottom: 8px;
+            z-index: 10;
+        }
+    }
+}
+
+.scroll-top-shadow {
+    background: linear-gradient(white, white), radial-gradient(at top, rgba(0,0,0, .3), transparent 70%);
+    background-repeat: no-repeat;
+    background-size: 100% 30px, 100% 10px;
+    background-attachment: local, scroll;
+}
+
+.operator-btn-container {
+    margin-left: 10px;
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+// 表格中得标签颜色
+.level-tag {
+    color: #333;
+    width: 50px;
+    text-align: center;
+    border: none;
+    border-radius: 0;
+    height: 26px;
+    line-height: 24px;
+    color: $fontWhite;
+    border-radius: 3px;
+    margin: 5px 0;
+}
+
+.align-right {
+    text-align: right !important;
+}
+
+.rule-status {
+    &.is-enabled {
+        background: $runningIcon;
+    }
+    &.is-disabled {
+        background: $stopedIcon;
+    }
+}
+
+.adjust-tag {
+    cursor: pointer;
+    margin-right: 20px;//修改状态间距50--20
+    .el-tag {
+        width: 15px;
+        height: 15px;
+        padding: 0;
+        border-radius: 0;
+        margin-right: 10px;
+        position: relative;
+        top: 3px;
+    }
+}
+
+.appserver {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    .script-item {
+        display: inline-block;
+        width: 40% !important;
+        &.appserver-port {
+            width: 210px !important;
+            .el-form-item__label {
+                width: 80px !important;
+            }
+        }
+        .el-form-item__content {
+            width: calc(100% - 120px) !important;
+        }
+    }
+    .order-box {
+        display: inline-block;
+        vertical-align: middle;
+        width: 140px !important;
+        .input-order {
+            margin-left: 10px;
+            width: 70px;
+            .el-input__inner {
+                padding: 0 5px;
+            }
+        }
+    }
+}
+
+.padding.card-padding-top {
+    padding-top: 24px !important;
+}
+
+// 申请单/审批详情
+.padding-row{
+    padding: 18px 0 0 0;
+    .col-name {
+        vertical-align: top;
+        display: inline-block;
+        color: $fontTitleLight;
+        width: 120px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .icon {
+        vertical-align: center;
+        font-size: 2rem;
+        position: relative;
+        top: -1rem;
+    }
+    .col-value {
+        display: inline-block;
+        vertical-align: top;
+        color: $fontContent;
+        width: calc(100% - 120px);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }
+}
+.instance-detail {
+    padding-top: 15px;
+    &.including {
+        margin-top: 10px;
+        border: 1px dashed $borderColor;
+        padding: 5px 15px;
+    }
+    &.third {
+        width: calc(33.33% - 5px);
+        display: inline-block;
+        vertical-align: top;
+        &:nth-last-child(1) {
+            margin-left: 10px;
+        }
+    }
+    .service-name {
+        font-weight: bold;
+    }
+}
+
+.card-title {
+    color: $fontTitleLight;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.text-wrap {
+    word-break: break-all;
+}
+
+.password-icon {
+    font-size: 16px;
+    padding-left: 15px;
+    cursor: pointer;
+}

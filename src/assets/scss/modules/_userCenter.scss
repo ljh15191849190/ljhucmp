@@ -1,0 +1,125 @@
+/******************任务单详情*********************/
+.task-detail-container {
+    .label {
+        color: $fontContentGray;
+        padding-right: 5px;
+    }
+    .value {
+        color: $fontContent;
+        &.link {
+            color: $themeColor;
+        }
+    }
+    .detail-layout {
+        padding: 10px;
+        border: 1px solid $borderColor;
+    }
+    .title {
+        font-size: 14px;
+        color: $fontContent;
+        font-weight: 600;
+    }
+    .task-basic-detail {
+        .basic-content {
+            margin-top: 20px;
+            padding-left: 40px;
+        }
+    }
+    .task-detail-error {
+        margin-top: 20px;
+        .error-content {
+            padding-left: 30px;
+            .error-msg {
+                max-height: 150px;
+                display: block;
+                padding: 9.5px;
+                margin: 0 0 10px;
+                font-size: 13px;
+                line-height: 1.428571429;
+                word-break: break-all;
+                word-wrap: break-word;
+                color: $fontContent;
+                border-radius: 3px;
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+        }
+    }
+    .resource-detail {
+        margin-top: 20px;
+        padding-right: 0;
+        .resource-detail-content {
+            .resource-item {
+                margin-bottom: 15px;
+            }
+            .service-title {
+                padding-left: 20px;
+            }
+            .resource-item-content {
+                padding-left: 40px;
+            }
+        }
+    }
+    .task-order-footer {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            color: $fontLightGrey;
+        }
+        .capi-text {
+            padding-left: 42px;
+        }
+        .close-btn {
+            margin-left: 40px;
+        }
+    }
+}
+
+.resource-form-container {
+    position: relative;
+    // max-height: 800px;
+    // background-color: rgba(249, 249, 249, 1);
+    padding: 10px 0px 0 0;
+    .provider-conf-pane {
+        overflow-y: auto;
+        padding: 0px 15px 15px 0;
+        .provider-form-pane {
+            display: flex;
+            .provider-form {
+                width: 600px;
+            }
+        }
+        .resouce-form {
+            width: 100%;
+            position: relative;
+            .title {
+                cursor: pointer;
+                background-color: $globalBgColor;
+                padding: 5px 10px;
+                margin-bottom: 10px;
+                .cursor-icon {
+                    float: right;
+                    font-size: 20px;
+                }
+            }
+            .form-title {
+                position: relative;
+                padding: 10px;
+                color: $fontTitleLight;
+            }
+            .template {
+                position: absolute;
+                left: 80px;
+                top: 2px;
+            }
+            .autoapply-resouce-form {
+                padding: 10px;
+            }
+            .include-resouce-form {
+                padding: 10px;
+            }
+        }
+    }
+}

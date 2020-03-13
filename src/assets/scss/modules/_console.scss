@@ -1,0 +1,157 @@
+/**
+ * @description Define console module style
+ */
+
+/************* Operation icon style start **************/
+ .oper-icon-btn{
+  background: $buttonSearch;
+  border-color: $borderColor;
+  margin-left: 10px;
+  font-size: 16px;
+  &:hover{
+    background: $themeColor;
+    color: $fontWhite;
+  }
+  & [class*="ucmp-icon-"] + span{
+    margin-left: 5px;
+  }
+}
+
+.service-instance-list {
+  .tableContainer {
+    padding-bottom: 0 !important;
+  }
+  // 云主机列表页面，标签正常显示
+  .filter-form {
+    .full-half {
+      width: auto !important;
+    }
+  }
+}
+.sync-action {
+  font-size: 18px;
+}
+/************* Operation icon style end **************/
+
+/************* Service instance detail style start **************/
+.instance-calc-container{
+    height: calc(100% - 30px - 16px);
+    .el-tabs__content{
+        height: calc(100% - 55px);
+    }
+    &.no-full-height{
+        .el-tabs__content{
+            height: calc(100% - 20px);
+        }
+    }
+}
+
+@mixin bg-color($bg:success){
+    @if ($bg == success) {
+        background-color: $in-success;
+    }
+    @else if($bg == stop) {
+        background-color: $stopedIcon;
+    }
+     @else if($bg == out-success) {
+        background-color: $runningLighterIcon;
+    }
+    @else if($bg == out-stop) {
+        background-color: $stopedLighterIcon;
+    }
+}
+
+.out-status {
+    margin-left: 10px;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .in-status {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+    .up {
+        @include bg-color(success);
+    }
+    .down {
+        @include bg-color(stop);
+    }
+}
+.up-out {
+    @include bg-color(out-success);
+}
+.down-out {
+    @include bg-color(out-stop);
+}
+/************* Service instance detail style end **************/
+
+/***************** table column filter start ****************************/
+.th-filter {
+    position: absolute;
+    z-index: 2010;
+    max-width: 400px;
+    padding: 6px 0;
+    background-color: white;
+    color: $fontContent;
+    border: 1px solid white;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    max-height: 300px;
+    max-width: 250px;
+    overflow: auto;
+
+    .el-dropdown-menu__item {
+        color: $fontContent;
+        font-size: 13px;
+        padding: 0 15px;
+        line-height: 27px;
+    }
+
+    .el-dropdown-menu__item:not(.is-disabled):hover {
+        color: $themeColor;
+    }
+
+    .th-filter-item-checked {
+        color: $themeColor;
+    }
+
+    .dropdown-top {
+        margin-bottom: 6px;
+        position: relative;
+        &::after{
+            content: '';
+            width: 100%;
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            border-bottom: 1px solid $borderColor;
+        }
+    }
+}
+
+.th-filter-enum {
+    margin: 0;
+    padding: 0;
+}
+
+.th-filter-checked {
+    color: $themeColor;
+}
+
+.th-filter-item-checked {
+    background-color: #e6f2fe;
+    color: $themeColor;
+}
+/***************** table column filter end ****************************/
+
+.operator-panel {
+    span.is-danger {
+        white-space: normal;
+    }
+}

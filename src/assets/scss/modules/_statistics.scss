@@ -1,0 +1,175 @@
+.el-tabs:not(.el-tabs--border-card):not(.el-tabs--card) {
+    .el-tabs__nav {
+        margin-left: 15px;
+        .el-tabs__item:not(:nth-last-child(1)) {
+            &::after {
+                content: ' ';
+                position: relative;
+                left: 20px;
+                border-right: 1px solid $borderBottom;
+            }
+        }
+    }
+}
+.el-tabs__nav-wrap::after {
+    height: 1px;
+}
+.top-chart-container {
+    height: 400px;
+}
+.warning-items {
+    height: 33.3%;
+    line-height: 40px;
+    color: $chartCardGreen;
+    text-align: left;
+    margin-left: 13%;
+}
+.bg-orange {
+    background: $chartCardBgOrange;
+}
+.font-orange {
+    color: $chartCardBgOrange;
+}
+.bg-blue {
+    background: $chartCardBlue;
+}
+.bg-deep-blue {
+    background: $chartCardDeepBlue;
+}
+.bg-green {
+    background: $chartCardGreen;
+}
+.bg-deep-green {
+    background: $chartCardDeepGreen;
+}
+.load-more {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 30px;
+    &:hover {
+        color: $themeColor;
+    }
+}
+.active_capacity {
+    &:hover {
+        color: $themeColor;
+    }
+}
+.theme_color_border {
+    border: 1px solid $themeColor !important;
+}
+.resource-progress {
+    margin-bottom: 5px;
+    .el-progress-bar {
+        .el-progress-bar__outer {
+            border-radius: 0px !important;
+            background: #e0e4e9 !important;
+            .el-progress-bar__inner {
+                border-radius: 0px !important;
+            }
+        }
+    }
+}
+.resource-item {
+    &.activeItem {
+        background: $fontWhite;
+        .title-resource {
+            color: $themeColor;
+        }
+    }
+}
+
+
+@mixin alarmTheme ($Alarmcolor) {
+    background: $Alarmcolor;
+    box-shadow: rgba($color: $Alarmcolor, $alpha: 0.5) 0 0 0 5px;
+}
+.alarm-statis-section {
+    .top_alarm_count {
+        .flex-item {
+            box-sizing: border-box;
+            &:hover {
+                border: 1px solid $themeColor;
+            }
+        }
+    }
+
+    .flex-item {
+        width: calc(25% - 10px);
+        height: 125px;
+        background: #f6f6f6;
+        padding: 10px 0;
+        .circle-cot {
+            min-width: 150px;
+            display: inline-block;
+            text-align: center;
+            .icon-circle {
+                display: inline-block;
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                text-align: center;
+                i {
+                    line-height: 90px;
+                    color: $fontWhite;
+                    font-size: 50px;
+                }
+            }
+        }
+        .text-count {
+            display: inline-block;
+            width: calc(100% - 155px);
+            padding: 10px 0;
+            .alarm-count {
+                font-size: 36px;
+                line-height: 40px;
+                color: $fontTitle;
+                display: block;
+            }
+            .alarm-label {
+                font-size: 20px;
+                white-space: nowrap;
+            }
+        }
+
+        .alarm-total {
+            .circle-cot>.icon-circle { @include alarmTheme($purple); }
+            .alarm-label { color: $purple; }
+        }
+        .alarm-danger {
+            .circle-cot>.icon-circle { @include alarmTheme($danger); }
+            .alarm-label { color: $danger; }
+        }
+        .alarm-warning {
+            .circle-cot>.icon-circle { @include alarmTheme($chartCardBgOrange); }
+            .alarm-label { color: $chartCardBgOrange; }
+        }
+        .alarm-info {
+            .circle-cot>.icon-circle { @include alarmTheme($chartCardBlue); }
+            .alarm-label { color: $chartCardBlue; }
+        }
+    }
+    // 响应式布局
+    @media screen and (max-width: 1510px) {
+        .flex-item {
+            height: 100px;
+            padding: 0;
+            .circle-cot {
+                min-width: 100px;
+                .icon-circle {
+                    width: 80px;
+                    height: 80px;
+                    i {
+                        font-size: 40px;
+                        line-height: 70px;
+                    }
+                }
+            }
+            .text-count {
+                .alarm-count {
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+}

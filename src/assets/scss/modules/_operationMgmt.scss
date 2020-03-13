@@ -1,0 +1,13 @@
+/*
+* @description 运营管理模块样式
+*/
+
+.range-margin-left{
+    margin-left: 10px;
+}
+// bug UCMP-848申请单失败，错误信息展示框优化
+.error-dialog {
+    max-height: 500px;
+    overflow-y: auto;
+    word-break: break-all;
+}

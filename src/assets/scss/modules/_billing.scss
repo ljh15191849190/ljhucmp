@@ -1,0 +1,178 @@
+//*****************计费策略****************//
+.billing-container {
+    .form {
+        max-width: 700px;
+    }
+    .select-width {
+        max-width: 585px !important;
+    }
+    .upload-pane {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 10px;
+        .upload-desc {
+            padding-right: 10px;
+            color: $fontTitleLight;
+        }
+        .upload {
+            padding-right: 10px;
+        }
+        .margin-right {
+            margin-right: 10px;
+        }
+    }
+}
+.time-pane {
+    padding: 12px 10px 35px 10px;
+    background-color: $fontWhite;
+    .title {
+        color: $fontContent;
+    }
+    .time {
+        margin-top: 15px;
+        margin-bottom: 12px;
+        text-align: center;
+        color: $fontTitle;
+        font-size: 18px;
+    }
+    .desc {
+        margin-top: 10px;
+        color: $fontTitleLight;
+        font-size: 12px;
+    }
+}
+.bill-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+        margin-bottom: 5px;
+        color: $fontLightGrey;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .capi-text {
+        padding-left: 42px;
+    }
+}
+//***************设备管理****************//
+.device-form {
+    padding-left: 150px;
+    overflow-y: auto;
+    .flavor-value {
+        margin-left: 20px;
+    }
+    .flavor-btn {
+        position: absolute;
+        font-size: 25px;
+        margin-left: 25px;
+        cursor: pointer;
+        &.remove {
+            color: $cancelBgColor;
+            &:hover {
+               color: $fontOrange;  
+            }
+        }
+        &.plus {
+            color: $themeColor;
+            &.active {
+                margin-left: 68px; 
+            }
+        }
+    }
+    .form-width {
+        max-width: 600px !important;
+    }
+    .half-item-width {
+        width: 265px;
+    }
+    .flavor-value-error {
+        margin-left: 285px;
+    }
+}
+//***************部门账单****************//
+.bill-container {
+    .pdf_down {
+        padding: 6px 20px;//修改按钮位置5--6
+        background-color: $chartCardGrey;
+        cursor: pointer;
+        span {
+            padding-left: 5px;
+        }
+        &:hover {
+            background-color: $themeColor;  
+            color:$fontWhite;
+        }
+    }
+    .form-width {
+        width: 200px;
+    }
+    .bill-chart-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .header-right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            .sub-title {
+                padding: 0px 5px 0px 20px;
+            }
+        }
+    }
+    .dash-chart-content {
+        height: 300px;
+        background:$fontWhite;
+        margin-bottom: 10px;
+        width: calc(50% - 5px);
+        &:nth-child(2n+1){
+            margin-right: 10px;
+        }
+    }
+    .dash-chart-content-info {
+        height: calc(100% - 10px);
+        background:$fontWhite;
+        margin-bottom: 10px;
+        width: calc(45% - 5px);
+        .price-chart-container {
+            padding-top: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .price-total-circle {
+                background-color:$fontWhite;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 190px;
+                height: 190px;
+                border-radius: 50%;
+                border: 28px solid $chartCardBgOrange;
+                .price-total {
+                    font-size: 16px;
+                    line-height: 25px;
+                    color: $fontContent
+                }
+            }
+        }
+    }
+    .dash-chart-content-pay {
+        height: calc(100% - 10px);
+        background:$fontWhite;
+        margin-bottom: 10px;
+        width: calc(55% - 5px);
+    }
+    .dash-chart-full-content {
+        height: 300px;
+        width: 100%;
+    }
+    .price-text {
+        color: $danger;
+    }
+}

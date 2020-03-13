@@ -1,0 +1,211 @@
+
+/**
+* @description 默认布局
+*/
+
+.container-left-part {
+    height: 100%;
+    position: absolute !important;
+    z-index: 100;
+    width: 190px;
+}
+.container-right-part {
+    position: relative;
+    width: calc(100% - #{$menuLargeWidth});
+    margin-left: $menuLargeWidth;
+    height: 100%;
+    overflow-y: auto;
+}
+.container-right-side {
+    height: 165px;
+    // background: $themeColor;
+    position: fixed;
+    top: calc(50% - 115px);
+    right: 0;
+    z-index: 3000;
+}
+/** 顶部按钮容器 **/
+.top-button-container {
+    position: absolute;
+    top: 6px;
+    right: 16px;
+    .el-button--primary{
+        color: $themeColor;
+        background: none;
+        border-color: none;
+    }
+    .el-button--small{
+        border:none;
+        .el-icon-plus:before{
+            @extend %iconfont;
+            content: '\e674';
+          }
+    }
+}
+.margin-top {
+    margin-top: 10px;
+}
+.margin-bottom {
+    margin-bottom: 10px;
+}
+.margin-left {
+    margin-left: 10px;
+}
+.margin-right {
+    margin-right: 10px;
+}
+.margin-right-5 {
+  margin-right: 5px;
+}
+.no-margin-left {
+    margin-left: 0 !important;
+}
+.no-margin-right {
+    margin-right: 0 !important;
+}
+.no-margin-top {
+    margin-top: 0 !important;
+}
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+.no-margin {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.no-padding-left {
+    padding-left: 0 !important;
+}
+.no-padding-right {
+    padding-right: 0 !important;
+}
+.no-padding-top {
+    padding-top: 0 !important;
+}
+.no-padding-bottom {
+    padding-bottom: 0 !important;
+}
+.no-padding {
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.padding {
+    padding-bottom: 16px !important;
+    padding-top: 16px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+}
+.padding-left {
+    padding-left: 16px;
+}
+.padding-right {
+    padding-right: 16px;
+}
+.padding-top {
+    padding-top: 16px;
+}
+.padding-bottom {
+    padding-bottom: 16px;
+}
+.normal-widget-width {
+    width: 260px;
+}
+.full-container {
+    width: 100%;
+    height: 100%;
+}
+.full-width {
+    width: 100%;
+}
+.full-height {
+    height: 100%;
+}
+.half-height {
+    height: 50%;
+}
+.height-fit-content {
+    height: fit-content;
+}
+.inline-block {
+    display: inline-block;
+}
+.flex {
+    display: flex;
+}
+.aligin-center {
+    align-items: center;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+/***************** 页面左右side布局 *********************/
+.main-content {
+    background: transparent;
+    display: flex;
+    .right-side {
+        margin-left: 10px;
+        width: 480px;
+        border-left: 1px solid rgb(238, 243, 242);
+        height: 100%;
+        padding-left: 16px;
+        & > .title {
+            height: 52px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgb(238, 243, 242);
+        }
+    }
+    .left-side {
+        padding-right: 16px;
+        width: calc(100% - 490px);
+        .filters {
+            border-bottom: 1px solid rgb(238, 243, 242);
+            padding: 5px 15px;
+        }
+    }
+    .right-side, .left-side {
+        height: 100%;
+        background: $fontWhite;
+    }
+    .right-info-side {
+        width: 250px;
+    }
+    .left-info-side {
+        width: calc(100% - 260px);
+    }
+}
+
+.header-desc-container {
+    border-top: 1px solid $borderColor;
+    margin-top: -16px;
+    color: $fontContentGray;
+}
+/***************** 滚动条style *********************/
+::-webkit-scrollbar
+{
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track-piece
+{
+    background-color: $borderColorForGrayBg;
+    -webkit-border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:vertical
+{
+    height: 5px;
+    background-color: $fontTitleLight;
+    -webkit-border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:horizontal
+{
+    width: 5px;
+    background-color: $fontTitleLight;
+    -webkit-border-radius: 8px;
+}

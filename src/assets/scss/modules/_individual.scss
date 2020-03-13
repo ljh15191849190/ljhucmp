@@ -1,0 +1,154 @@
+/**
+ * @description 个人中心
+ */
+
+/******************* 工单 ********************/
+.work-detail {
+
+    /******************* element步骤 ********************/
+    .el-steps.el-steps--horizontal {
+        margin-bottom: 22px;
+        margin-right: 80px;
+        line-height: 35px;
+
+        .el-step:last-child {
+            .el-step__main {
+                width: 80px;
+            }
+        }
+
+        .el-step__head {
+            .el-step__icon {
+                width: 26px;
+                height: 26px;
+                font-size: 16px;
+                .el-step__icon-inner{
+                    font-weight: normal;
+                }
+                &.is-text{
+                    border:1px solid;
+                }
+            }
+
+            .el-step__line {
+                top: 17px;
+                left: 48px;
+                right: 12px;
+            }
+
+            &.is-finish {
+                color: $navbarSelectedBgColor;
+                border-color: $navbarSelectedBgColor;
+
+                .el-step__line {
+                    background-color: $navbarSelectedBgColor;
+                }
+
+                .el-step__icon.is-text {
+                    color: $fontWhite;
+                    background-color: $navbarSelectedBgColor;
+                }
+            }
+        }
+
+        .el-step__main {
+            background-color: $fontWhite;
+            position: absolute;
+            top: 0;
+            left: 35px;
+            padding-right: 12px;
+            z-index: 1;
+
+            .el-step__title {
+                color: $fontContent;
+            }
+
+            .el-step__description {
+                position: absolute;
+                top: 100%;
+            }
+
+            .el-step__title.is-wait {
+                color: $fontTitleLight;
+            }
+        }
+    }
+    /******************* element步骤end ********************/
+
+    .ticket-comment {
+        margin-top: 45px;
+        // height: calc(100% - 32px - 36px - 140px - 45px - 106px);
+
+        .comment-list {
+            height: 100%;
+        }
+
+        .comment-row {
+            margin: 0 48px 16px 48px;
+
+            .content {
+                flex: 1;
+                position: relative;
+                background: $grayBgColor;
+                border-radius: 8px;
+                padding: 16px 22px 16px 22px;
+
+                // .text-normal {
+                //     padding-top: 12px;
+                // }
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 30px;
+                    left: -16px;
+                    border-top: 8px solid $grayBgColor;
+                    border-right: 8px solid $grayBgColor;
+                    border-bottom: 8px solid transparent;
+                    border-left: 8px solid transparent;
+                }
+            }
+
+            .content-info {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .avator {
+            flex: 0;
+        }
+
+        .ucmp-icon-user-avatar {
+            background-color: $grayBgColor;
+            font-size: 36px;
+            line-height: 2;
+            padding: 8px 11px;
+            border-radius: 50%;
+            margin-right: 24px;
+        }
+    }
+
+    .raty .title {
+        color: $fontTitleLight;
+    }
+}
+
+// 火狐浏览器下调整高度
+@-moz-document url-prefix() {
+    .work-detail .ticket-comment {
+        // 父元素 - padding 32 - 流程条 36 - 工单信息 140 - comment margin 45 - 发表评论 106 - 火狐浏览器下margin问题26
+        height: calc(100% - 32px - 36px - 140px - 45px - 106px - 26px);
+    }
+}
+
+/******************* 申请单明细 ********************/
+.full-container{
+    .el-card{
+        // border:none;
+        .el-card__header{
+            padding:12px 20px;
+            background: $grayBgColor;
+        }
+    }
+}

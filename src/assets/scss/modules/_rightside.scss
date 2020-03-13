@@ -1,0 +1,197 @@
+
+/******** 右侧菜单图标 ********/
+.side-function-container {
+    border-radius: 5px 0 0 5px;
+    background: $cancelBgColor;
+    cursor: pointer;
+    position: relative;
+    opacity: 0.9;
+    padding: 5px;
+}
+
+.side-icon-function {
+    font-size: 20px;
+    border-bottom: 1px solid $borderColorForGrayBg;
+    width: 40px;
+    height: 65px;
+    position: relative;
+    &:before {
+        position: absolute;
+        top: 15px;
+        left: 6px;
+    }
+    &:last-child {
+        border-bottom: 0;
+    }
+}
+.side-icon-cart-pane {
+    .side-icon-cart-function {
+        font-size: 20px;
+        width: 40px;
+        height: 45px;
+        position: relative;
+        &:before {
+            position: absolute;
+            top: 5px;
+            left: 6px;
+        }
+    }
+    .cart-text {
+        text-align: center;
+        line-height: 20px;
+    }
+    .cart-num {
+        text-align: center;
+        width: 25px;
+        height: 25px;
+        background-color: #ccc;
+        border-radius: 12.5px;
+        margin-left: 8px;
+        margin-top: 5px;
+        font-size: 16px;
+        color: #fff;
+        &.active {
+            background-color: #ffaa00;
+        }
+    }
+}
+
+.single-arrow-container {
+    position: absolute;
+    right: 1px;
+    top: calc(50% - 13px);
+    border: 1px solid $borderColorForGrayBg;
+    border-left: 0;
+    border-right: 0;
+    background: $grayBgColor;
+    &:hover {
+        background: $themeColor;
+        color: $fontWhite;
+    }
+    .el-icon-caret-right {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.arrow-right-container {
+    height: 25px !important;
+    .el-icon-caret-right {
+        width: 100%;
+        height: 100%;
+        &:before {
+            position: absolute;
+            top: 2px;
+            left: 13px;
+        }
+    }
+}
+
+.side-shopping-list-modal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+}
+.side-shopping-list-container {
+    width: 590px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+}
+.car-navs-container {
+    width: 100%;
+    background: $fontWhite;
+    .navs-bg-container {
+        width: calc(100% - 44px);
+        line-height: 35px;
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    .el-button--small{
+        margin:0;
+        padding: 9px 15px;
+    }
+}
+.car-items-container {
+    width: 100%;
+    height: calc(100% - 147px);
+    overflow: hidden;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.9);
+    .service-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        .service-instance-nav {
+            list-style: none;
+        }
+    }
+    .el-checkbox__inner{
+        width:20px;
+        height:20px;
+        &::after {
+            -webkit-transform: rotate(45deg) scaleY(1);
+            transform: rotate(45deg) scaleY(1);
+            width: 5px;
+            height: 10px;
+            left: 6px;//购物车复选框选中状态未对齐修改
+        }
+    }
+}
+.car-modal-bg {
+    background: $fontTitle;
+}
+
+.car-modal-footer {
+    width: 100%;
+    background: $fontWhite;
+    height: 90px;
+    line-height: 90px;
+    padding-right: 25px;
+    border-top: $borderColor 1px solid;
+}
+
+.service-container {
+    & > .service-header {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid $borderBottom;
+        // padding-left: 15px;
+        .service-name {
+            margin-left: 10px;
+            font-size: 16px;
+        }
+    }
+
+    .checked-container {
+        width: 80px;
+        // padding-left: 15px;
+        margin: auto 0;
+    }
+
+    .info-container {
+        width: calc(100% - 80px);
+        border-bottom: 1px solid $borderBottom;
+        padding: 10px 0;
+        &.full-width {
+            width: 100%;
+        }
+        .item{
+            padding:3px 0;
+            .text-normal{
+                width:128px;
+                text-align: right;
+                color: $fontTitleLight;
+            }
+        }
+    }
+}
+.car-submit-btn {
+    height: 40px;
+    border-radius: 0;
+    padding-left: 25px !important;
+    padding-left: 25px !important;
+}

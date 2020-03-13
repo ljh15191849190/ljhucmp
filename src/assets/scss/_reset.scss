@@ -1,0 +1,344 @@
+/**
+* @description UI默认行为/复写Bootstrap、elementUI
+*/
+html, body {
+    height: 100%;
+    font-size: $fontsize14;
+}
+ul, li {
+    list-style: none;
+}
+button:focus {
+    outline: none;
+}
+// 复写bootstrap label
+label {
+    margin-bottom: 0;
+}
+.tree-btns {
+    margin-left: 5px;
+    color: $themeColor;
+    &:hover {
+        color: $themeColor;
+    }
+}
+.theme-color {
+    color: $themeColor;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+    border-top-color: $borderColor;
+}
+.tooltip-inner {
+    background: $borderColor
+}
+
+.el-button [class*=atom-icon-]+span {
+    margin-left: 5px;
+}
+
+/*************** reset select and date component width*************/
+.el-select,.el-date-editor.el-input, .el-date-editor.el-input__inner, .el-cascader {
+    max-width: 200px;
+    &.el-date-editor--daterange{
+        max-width: 250px;
+    }
+}
+
+.rw-input{
+    .el-select,.el-date-editor.el-input, .el-date-editor.el-input__inner, .el-cascader, .el-input, .el-textarea, .multiple-form-items-container {
+        width: 100%;
+        max-width: 480px;
+        &.el-date-editor--daterange{
+            width: 100%;
+            max-width: 480px;
+        }
+        &.has-icon{
+            width: calc(100% - 20px);
+        }
+    }
+    &.el-form-item--small.el-form-item{
+        margin-bottom: 15px;
+        &.multiple-form-items {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/***************** reset tooltip style (backgroundColor) start *****************************/
+// tooltip 样式
+@each $position in top, bottom, left, right {
+    .el-tooltip__popper[x-placement^="#{$position}"] .popper__arrow{
+        $pos: $position;
+        border-#{$pos}-color: rgba(0, 0, 0, 0.6) !important;
+        &:after{
+            border-#{$pos}-color: transparent !important;
+        }
+    }
+}
+
+.el-tooltip__popper {
+    max-width: 500px;
+}
+
+.el-tooltip__popper.is-dark {
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+/**** end *****/
+
+//
+.picker-width{
+    &.el-select, &.el-date-editor.el-input, &.el-date-editor.el-input__inner{
+        width: auto !important;
+        max-width: 250px !important;
+        vertical-align: bottom;
+        .el-range-separator{
+          width: 10%;
+        }
+    }
+}
+
+/***************** reset el-button round style start ***************************/
+.el-button--mini.is-circle {
+    padding: 5px;
+    &.more-btn {
+        padding: 10px 5px;
+    }
+}
+.el-button--mini{
+    padding:5px 15px;
+    border-radius:0;
+}
+/***************** reset el-button round style end *****************************/
+.resource-bar{
+    .progress-bar{
+        background: transparent;
+    }
+    .el-progress-bar__outer{
+        background: $fontContent !important;
+    }
+}
+
+// UCMP3-989 更换页面loading效果
+.ucmp-icon-loading{
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+    // background: url(../../../static/images/loading.gif);
+    border-width: 20px;
+    border-radius: 50%;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    border-style: double;
+    border-color: $themeColor #ddd #ddd;
+}
+
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(359deg); }
+}
+
+@-o-keyframes spin {
+    100% { -moz-transform: rotate(359deg); }
+}
+
+@keyframes spin {
+    100% {  transform: rotate(359deg); }
+}
+
+.hide-check-header{
+    .el-table-column--selection{
+        &.is-leaf{
+            .cell{
+                display: none;
+            }
+        }
+    }
+}
+
+.is-plain.ucmp-service-action {
+    color: $fontContent;
+    background: $fontWhite;
+    border-color: $disabledColor;
+        &.el-button--default, &.el-button--success,&.el-button--warning {
+            &.is-disabled {
+                color: $disabledColor;
+                background: $grayBgColor;
+                border-color:#eee;
+                &:hover{
+                    color: $disabledColor;
+                    background: $grayBgColor;
+                    border-color:#eee;
+                }
+            }
+            &:hover {
+                background: $themeColor;
+                color: $fontWhite;
+                border-color: $fontWhite;
+            }
+        }
+        &.el-button--danger {
+
+            &.is-disabled {
+                color: $disabledColor;
+                background: #f6f6f6;
+                border-color:#eee;
+                &:hover{
+                    color: $disabledColor;
+                    background: #f6f6f6;
+                    border-color:#eee;
+                }
+            }
+            &:hover {
+                background: $danger;
+                color: $fontWhite;
+                border-color: $fontWhite;
+                }
+        }
+        & [class*='ucmp-icon']:before {
+          font-size: 18px;
+        }
+}
+.el-tag:not(.origin) {
+    border-radius: 0px;
+    padding:2px 10px 0;
+    border:none;
+    &.el-tag--detail, &.el-tag--default{
+        background-color: $borderColorForGrayBg;
+        color: $fontWhite;
+    }
+    &.el-tag--success{
+        background-color: $running;
+        color: $fontWhite;
+    }
+    &.el-tag--error{
+        background: $danger;
+        color: $fontWhite;
+    }
+    &.el-tag--primary{
+        background: $navBarIconcolor;
+        color: $fontWhite;
+    }
+
+    .el-select__tags-text{
+        display: inline-block;
+        max-width: 50px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+    }
+}
+
+.blueprint-form {
+    .el-form-item__error{
+        position: relative;
+    }
+}
+
+.el-message-box__message{
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+.el-breadcrumb,.el-form-item__label,.el-table{
+    font-size: $fontsize12 !important;
+}
+.el-input-group__append,.el-input__inner{
+    border-radius: 0 !important;
+}
+.el-dialog__header{
+    padding:10px 20px;
+    .el-dialog__title{
+        font-size: 14px;
+    }
+    .el-dialog__headerbtn{
+        top:10px;
+    }
+}
+
+.el-breadcrumb__inner{
+    &.is-link{
+        font-weight: normal;
+        color:$fontTitleLight;
+    }
+}
+
+.search-icon{
+    cursor: pointer;
+    &:hover{
+        color: $themeColor;
+    }
+}
+
+.hidden{
+    display: none;
+}
+
+.el-dropdown-menu {
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.el-form--label-top {
+    .el-form-item--small{
+        &.el-form-item {
+            margin-bottom: 8px;
+        }
+        .el-form-item__label {
+            line-height: 24px;
+            padding-bottom: 0px;
+            line-height: 24px;
+        }
+    }
+}
+
+.el-radio + .el-radio{
+    // UCMP3-3526【服务目录】申请青云关系型数据库，配置排版展示需要优化
+    //margin-left: 25px;
+}
+
+.table-select{
+    .el-table {
+        .el-input-number{
+            width: auto;
+            max-width: 130px;
+        }
+    }
+}
+.header-filter-drop {
+    line-height: 23px !important;
+    padding: 0 !important;
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: $fontsize12;
+    &.is-active {
+        color: $themeColor;
+    }
+}
+
+.filter-drop-menu {
+    max-height: 70%;
+    .el-dropdown-menu__item {
+        &.is-selected {
+            background: #e6f2fe;
+            color: $themeColor;
+        }
+        &.dropdown-top {
+            margin-bottom: 12px;
+            position: relative;
+            &::after{
+                content: '';
+                width: 100%;
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: -6px;
+                border-bottom: 1px solid $borderColor;
+            }
+        }
+    }
+}
+//UCMP3-5042【控制台】备份服务、防火墙策略修改，不进行任何修改提交申请，建议提示框在浮层上面
+.el-notification {
+    z-index: 10000!important;
+}
